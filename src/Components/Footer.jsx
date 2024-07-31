@@ -44,6 +44,7 @@ const Einput = styled.input`
   border: none;
   outline: none;
   color:white;
+  background-color: transparent;
 `;
 
 const UlSupport = styled.ul`
