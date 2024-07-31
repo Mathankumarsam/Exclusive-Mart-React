@@ -1,0 +1,41 @@
+[
+    {
+        "Category": [
+            {
+                "id": "0",
+                "icon-img": "",
+                "name": "Phones"
+            },
+            {
+                "id": "1",
+                "icon-img": "",
+                "name": "Computers"
+            },
+            {
+                "id": "2",
+                "icon-img": "",
+                "name": "SmartWatch"
+            },
+            {
+                "id": "3",
+                "icon-img": "",
+                "name": "Headphone"
+            },
+            {
+                "id": "4",
+                "icon-img": "",
+                "name": "Gaming"
+            },
+            {
+                "id": "5",
+                "icon-img": "",
+                "name": "Camera"
+            }
+        ]
+    },
+    {
+        "id": "0",
+        "title": "Maddy",
+        "img": ""
+    }
+]
