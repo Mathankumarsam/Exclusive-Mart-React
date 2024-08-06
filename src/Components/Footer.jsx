@@ -84,7 +84,7 @@ const Appicon = styled.li`
 
 const BlackDiv = styled.div`
   background-color: black;
-  color:  #e9e5e550;
+  color: #e9e5e550;
   border-top: 1px solid #e9e5e550;
   padding: 25px 0px;
   text-align: center;
