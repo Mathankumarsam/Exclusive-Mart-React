@@ -9,7 +9,9 @@ const Container = styled.div`
   padding: 50px 0px;
 `;
 
-const Division = styled.div``;
+const Division = styled.div`
+  color: black;
+`;
 
 const UlExclusive = styled.ul`
   padding: 0px;
@@ -43,7 +45,7 @@ const Einput = styled.input`
   background-color: transparent;
   border: none;
   outline: none;
-  color:white;
+  color: white;
 `;
 
 const UlSupport = styled.ul`
@@ -59,21 +61,37 @@ const UlAccQuick = styled.ul`
   padding: 0px;
 `;
 
-const UlDownload = styled.div`
-  background-color: black;
-`;
+const UlDownload = styled.div``;
 
 const DownApp = styled.p`
-  background-color: black;
+  color: #afafaf;
+  font-size: 12px;
+  font-weight: 500;
+  margin: 0px;
 `;
 
 const Downdiv = styled.div`
-  background-color: black;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
 `;
 
+const Imagediv = styled.div``;
+
 const Appicon = styled.li`
-  background-color: black;
+  padding: 3px;
 `;
+
+const BlackDiv = styled.div`
+  background-color: black;
+  color:  #e9e5e550;
+  border-top: 1px solid #e9e5e550;
+  padding: 25px 0px;
+  text-align: center;
+  font-size: 18px;
+`;
+
+const copyRight = styled.a``;
 
 function Footer() {
   return (
@@ -169,28 +187,61 @@ function Footer() {
             <Ullist>
               <Listhed> Download app </Listhed>
             </Ullist>
-            <DownApp></DownApp>
+            <DownApp>Save $3 with App New User Only</DownApp>
             <Downdiv>
-              <></>
+              <div>
+                <img
+                  src={require("../assets/images/Qr Code.png")}
+                  alt="maddy"
+                />
+              </div>
+              <Imagediv>
+                <Appicon>
+                  <img
+                    src={require("../assets/images/png-transparent-google-play-store-logo-google-play-app-store-android-wallets-text-label-logo.png")}
+                    alt="maddy"
+                  />
+                </Appicon>
+                <Appicon>
+                  <img
+                    src={require("../assets/images/download-appstore.png")}
+                    alt="maddy"
+                  />
+                </Appicon>
+              </Imagediv>
             </Downdiv>
             <Downdiv>
               <Appicon>
-                <Ulanchor></Ulanchor>
+                <Ulanchor>
+                  <img src={require("../assets/images/Vector.svg").default} />
+                </Ulanchor>
               </Appicon>
               <Appicon>
-                <Ulanchor></Ulanchor>
+                <Ulanchor>
+                  <img src={require("../assets/images/Group.svg").default} />
+                </Ulanchor>
               </Appicon>
               <Appicon>
-                <Ulanchor></Ulanchor>
+                <Ulanchor>
+                  <img
+                    src={require("../assets/images/Group (1).svg").default}
+                  />
+                </Ulanchor>
               </Appicon>
               <Appicon>
-                <Ulanchor></Ulanchor>
+                <Ulanchor>
+                  <img
+                    src={require("../assets/images/Vector (1).svg").default}
+                  />
+                </Ulanchor>
               </Appicon>
             </Downdiv>
           </UlDownload>
         </Division>
       </Container>
-      <Division></Division>
+      <BlackDiv>
+        <copyRight> © Copyright Rimel 2022. All right reserved</copyRight>
+      </BlackDiv>
     </>
   );
 }
