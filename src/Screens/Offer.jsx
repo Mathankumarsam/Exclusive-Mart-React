@@ -49,19 +49,19 @@ export default function Offer() {
           <img
             src={
               require("../assets/images/1200px-Apple_gray_logo 1.svg").default
-            }
+            } alt="fucntion"
           />
           <span> iphone 14 Series </span>
         </DivP>
         <Divspan>Up to 10% off Voucher </Divspan>
         <DivA>
           Shop Now{" "}
-          <img src={require("../assets/images/Vector (4).svg").default} />{" "}
+          <img src={require("../assets/images/Vector (4).svg").default} alt="functi" />
         </DivA>
       </div>
       <div>
         <Iimage
-          src={require("../assets/images/hero_endframe__cvklg0xk3w6e_large 2.png")}
+          src={require("../assets/images/hero_endframe__cvklg0xk3w6e_large 2.png")} alt="functi"
         />
       </div>
     </Division>

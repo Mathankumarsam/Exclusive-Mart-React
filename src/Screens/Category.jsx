@@ -62,37 +62,37 @@ export default function Category() {
       <Div2>
         <Tiv>
           <Iimage
-            src={require("../assets/images/Category-CellPhone.svg").default}
+            src={require("../assets/images/Category-CellPhone.svg").default} alt="cell"
           />
           <Hed5>Phones</Hed5>
         </Tiv>
         <Tiv>
           <Iimage
-            src={require("../assets/images/Category-Computer.svg").default}
+            src={require("../assets/images/Category-Computer.svg").default} alt="compu"
           />
           <Hed5>Computers</Hed5>
         </Tiv>
         <Tiv>
           <Iimage
-            src={require("../assets/images/Category-SmartWatch.svg").default}
+            src={require("../assets/images/Category-SmartWatch.svg").default} alt="Smart"
           />
           <Hed5>SmartWatch</Hed5>
         </Tiv>
         <Tiv>
           <Iimage
-            src={require("../assets/images/Category-Headphone.svg").default}
+            src={require("../assets/images/Category-Headphone.svg").default} alt="head"
           />
           <Hed5>HeadPhones</Hed5>
         </Tiv>
         <Tiv>
           <Iimage
-            src={require("../assets/images/Category-Gamepad.svg").default}
+            src={require("../assets/images/Category-Gamepad.svg").default} alt="Game"
           />
           <Hed5>Gaming</Hed5>
         </Tiv>
         <Tiv>
           <Iimage
-            src={require("../assets/images/Group 1000005941.svg").default}
+            src={require("../assets/images/Group 1000005941.svg").default} alt="Grou"
           />
           <Hed5>Camera</Hed5>
         </Tiv>

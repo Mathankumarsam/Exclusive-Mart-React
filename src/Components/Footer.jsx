@@ -199,13 +199,13 @@ function Footer() {
                 <Appicon>
                   <img
                     src={require("../assets/images/png-transparent-google-play-store-logo-google-play-app-store-android-wallets-text-label-logo.png")}
-                    alt="maddy"
+                    alt="mady"
                   />
                 </Appicon>
                 <Appicon>
                   <img
                     src={require("../assets/images/download-appstore.png")}
-                    alt="maddy"
+                    alt="mady"
                   />
                 </Appicon>
               </Imagediv>
@@ -213,25 +213,25 @@ function Footer() {
             <Downdiv>
               <Appicon>
                 <Ulanchor>
-                  <img src={require("../assets/images/Vector.svg").default} />
+                  <img src={require("../assets/images/Vector.svg").default} alt="vector" />
                 </Ulanchor>
               </Appicon>
               <Appicon>
                 <Ulanchor>
-                  <img src={require("../assets/images/Group.svg").default} />
+                  <img src={require("../assets/images/Group.svg").default} alt="vect" />
                 </Ulanchor>
               </Appicon>
               <Appicon>
                 <Ulanchor>
                   <img
-                    src={require("../assets/images/Group (1).svg").default}
+                    src={require("../assets/images/Group (1).svg").default} alt="vetr"
                   />
                 </Ulanchor>
               </Appicon>
               <Appicon>
                 <Ulanchor>
                   <img
-                    src={require("../assets/images/Vector (1).svg").default}
+                    src={require("../assets/images/Vector (1).svg").default} alt="vedtor"
                   />
                 </Ulanchor>
               </Appicon>
