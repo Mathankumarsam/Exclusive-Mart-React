@@ -8,7 +8,7 @@
         "buyed":35,
         "new":false,
         "off":false,
-        "discount":false,
+        "dis":false,
         "color":false
     },
     {
@@ -20,7 +20,7 @@
         "buyed":95,
         "new":false,
         "off":false,
-        "discount":false,
+        "dis":false,
         "color":false
     },
     {
@@ -32,7 +32,7 @@
         "buyed":325,
         "new":false,
         "off":false,
-        "discount":false,
+        "dis":false,
         "color":false
     },
     {
@@ -44,7 +44,7 @@
         "buyed":145,
         "new":false,
         "off":false,
-        "discount":false,
+        "dis":false,
         "color":false
     },
     {
@@ -56,7 +56,7 @@
         "buyed":65,
         "new":true,
         "off":false,
-        "discount":false,
+        "dis":false,
         "color":true,
         "color1":"red",
         "color2":"blue"
@@ -70,7 +70,7 @@
         "buyed":35,
         "new":false,
         "off":false,
-        "discount":false,
+        "dis":false,
         "color":true,
         "color1":"yellow",
         "color2":"blue"
@@ -84,7 +84,7 @@
         "buyed":55,
         "new":true,
         "off":false,
-        "discount":false,
+        "dis":false,
         "color":true,
         "color1":"black",
         "color2":"blue"
@@ -98,7 +98,7 @@
         "buyed":55,
         "new":false,
         "off":false,
-        "discount":false,
+        "dis":false,
         "color":true,
         "color1":"green",
         "color2":"blue"
@@ -114,7 +114,7 @@
         "new":false,
         "off":true,
         "offer":40,
-        "discount":true,
+        "dis":true,
         "color":false
     },
     {
@@ -128,7 +128,7 @@
         "new":false,
         "off":true,
         "offer":35,
-        "discount":true,
+        "dis":true,
         "color":false
     },
     {
@@ -142,7 +142,7 @@
         "new":false,
         "off":true,
         "offer":30,
-        "discount":true,
+        "dis":true,
         "color":false
     },
     {
@@ -155,7 +155,7 @@
         "buyed":65,
         "new":false,
         "off":false,
-        "discount":true,
+        "dis":true,
         "color":false
     }
 ]
