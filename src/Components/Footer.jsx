@@ -91,8 +91,6 @@ const BlackDiv = styled.div`
   font-size: 18px;
 `;
 
-const copyRight = styled.a``;
-
 function Footer() {
   return (
     <>
@@ -213,25 +211,33 @@ function Footer() {
             <Downdiv>
               <Appicon>
                 <Ulanchor>
-                  <img src={require("../assets/images/Vector.svg").default} alt="vector" />
-                </Ulanchor>
-              </Appicon>
-              <Appicon>
-                <Ulanchor>
-                  <img src={require("../assets/images/Group.svg").default} alt="vect" />
-                </Ulanchor>
-              </Appicon>
-              <Appicon>
-                <Ulanchor>
                   <img
-                    src={require("../assets/images/Group (1).svg").default} alt="vetr"
+                    src={require("../assets/images/Vector.svg").default}
+                    alt="vector"
                   />
                 </Ulanchor>
               </Appicon>
               <Appicon>
                 <Ulanchor>
                   <img
-                    src={require("../assets/images/Vector (1).svg").default} alt="vedtor"
+                    src={require("../assets/images/Group.svg").default}
+                    alt="vect"
+                  />
+                </Ulanchor>
+              </Appicon>
+              <Appicon>
+                <Ulanchor>
+                  <img
+                    src={require("../assets/images/Group (1).svg").default}
+                    alt="vetr"
+                  />
+                </Ulanchor>
+              </Appicon>
+              <Appicon>
+                <Ulanchor>
+                  <img
+                    src={require("../assets/images/Vector (1).svg").default}
+                    alt="vedtor"
                   />
                 </Ulanchor>
               </Appicon>
