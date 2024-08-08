@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 // Styled components :-
 const Container = styled.div`
@@ -21,7 +22,7 @@ const TopText = styled.p`
   gap: 5px;
 `;
 
-const Link = styled.a`
+const Anchorli = styled.a`
   color: white;
   text-decoration: none;
   display: flex;
@@ -67,7 +68,7 @@ const ListItem = styled.li`
 
 `;
 
-const ListItemLink = styled.a`
+const ListItemLink = styled(Link)`
   color: black;
   text-decoration: none;
 `;
@@ -103,6 +104,8 @@ const Image = styled.img`
   margin-right: 10px;
 `;
 
+
+
 const NavBar = () => {
   return (
     <>
@@ -113,7 +116,7 @@ const NavBar = () => {
           </span>
           <ShopLink href="/">Shop Now</ShopLink>
         </TopText>
-        <Link href="/">
+        <Anchorli href="/">
           English
           <svg
             width="13"
@@ -124,26 +127,26 @@ const NavBar = () => {
           >
             <path
               d="M6.36403 4.95L11.314 0L12.728 1.414L6.36403 7.778L2.67029e-05 1.414L1.41403 0L6.36403 4.95Z"
-              fill="white"
+              fill="white" strokeWidth="2"
             />
           </svg>
-        </Link>
+        </Anchorli>
       </Container>
 
       <Bottom>
         <Header>Exclusive</Header>
         <NavList>
           <ListItem>
-            <ListItemLink href="/">Home</ListItemLink>
+            <ListItemLink to="/">Home</ListItemLink>
           </ListItem>
           <ListItem>
-            <ListItemLink href="/">Contact</ListItemLink>
+            <ListItemLink to="/contact">Contact</ListItemLink>
           </ListItem>
           <ListItem>
-            <ListItemLink href="/">About</ListItemLink>
+            <ListItemLink to="/about">About</ListItemLink>
           </ListItem>
           <ListItem>
-            <ListItemLink href="/">Sign Up</ListItemLink>
+            <ListItemLink to="/signup">Sign Up</ListItemLink>
           </ListItem>
         </NavList>
 
