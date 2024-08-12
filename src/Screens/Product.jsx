@@ -1,60 +1,38 @@
-import React from 'react';
-import styled from 'styled-components';
-import productlist from '../Data/Data.json';
+import React from "react";
+import styled from "styled-components";
+import productlist from "../Data/Data.json";
 
-
-
-const Container = styled.div`
-  /* Container styling */
-`;
+const Container = styled.div``;
 
 const ProductCard = styled.div`
-  /* Product card styling */
   margin-bottom: 20px;
 `;
 
-const TopSection = styled.div`
-  /* Top section styling */
-`;
+const TopSection = styled.div``;
 
-const BottomSection = styled.div`
-  /* Bottom section styling */
-`;
+const BottomSection = styled.div``;
 
 const Link = styled.a`
-  /* Link styling */
   text-decoration: none;
   color: inherit;
 `;
 
-const Content = styled.div`
-  /* Content section styling */
-`;
+const Content = styled.div``;
 
-const Cost = styled.div`
-  /* Cost styling */
-`;
+const Cost = styled.div``;
 
-const ColorSection = styled.div`
-  /* Color section styling */
-`;
+const ColorSection = styled.div``;
 
-const ColorBox1 = styled.div`
-  /* Color box 1 styling */
-`;
+const ColorBox1 = styled.div``;
 
-const ColorBox2 = styled.div`
-  /* Color box 2 styling */
-`;
+const ColorBox2 = styled.div``;
 
 const ProductImage = styled.img`
-  /* Product image styling */
   max-width: 100%;
   height: auto;
 `;
 
 const RateImage = styled.img`
-  /* Product image styling */
   max-width: 100%;
   height: auto;
 `;
@@ -65,7 +43,10 @@ export default function Product() {
       {productlist.map((product) => (
         <ProductCard key={product.id}>
           <TopSection>
-            <ProductImage src={require(`../assets/images/${product.img}`)}  alt={product.name} />
+            <ProductImage
+              src={require(`../assets/images/${product.img}`)}
+              alt={product.name}
+            />
           </TopSection>
           <BottomSection>
             <Link href="#">{product.name}</Link>
