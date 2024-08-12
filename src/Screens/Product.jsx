@@ -32,10 +32,10 @@ const ProductImage = styled.img`
   height: auto;
 `;
 
-const RateImage = styled.img`
-  max-width: 100%;
-  height: auto;
-`;
+// const RateImage = styled.img`
+//   max-width: 100%;
+//   height: auto;
+// `;
 // Use styled components in the component
 export default function Product() {
   return (
