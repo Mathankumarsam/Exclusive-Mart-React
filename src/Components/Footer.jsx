@@ -7,6 +7,7 @@ const Container = styled.div`
   display: flex;
   justify-content: space-around;
   padding: 50px 0px;
+  margin-top: 100px ;
 `;
 
 const Division = styled.div`
