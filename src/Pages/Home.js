@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import NavBar from "../Components/Header";
 import Footer from "../Components/Footer";
 import Offer from "../Screens/Offer";
@@ -10,8 +10,8 @@ import LikeButton from "../Components/Like";
 import { Link as RouterLink } from "react-router-dom";
 
 export default function Home() {
-  const [showAll, setShowAll] = useState(false);
-  const displayedProducts = showAll ? productlist : productlist.slice(0, 8);
+  // Slice the product list to get only the first 8 products
+  const displayedProducts = productlist.slice(0, 8);
 
   return (
     <>
@@ -98,7 +98,7 @@ const ProductCard = styled.div`
   display: flex;
   flex-direction: column;
   align-contents: stretch;
-  margin: 0px;
+  margin: 0;
 `;
 
 const TopSection = styled.div`
@@ -107,13 +107,14 @@ const TopSection = styled.div`
   border-radius: 5px;
   width: auto;
   height: 100%;
-  margin: 0px;
+  margin: 0;
   position: relative;
 
   &:hover .AddCart {
     display: block;
   }
 `;
+
 const AddCart = styled.div`
   display: flex;
   justify-content: center;
@@ -124,6 +125,7 @@ const AddCart = styled.div`
   transform: translatex(-50%);
   display: none;
 `;
+
 const BottomSection = styled.div`
   margin-top: 20px;
 `;
@@ -164,11 +166,13 @@ const ColorBox = styled.div`
 
   background-color: ${(props) => props.color || "#fff"};
 `;
+
 const ProductImage = styled.img`
   width: 100%;
   height: auto;
   display: block;
 `;
+
 const Icons = styled.ul`
   position: absolute;
   list-style: none;
@@ -180,6 +184,7 @@ const Icons = styled.ul`
   right: 0;
   padding: 5px 15px 0px 0px;
 `;
+
 const New = styled.p`
   position: absolute;
   left: 20px;
@@ -207,7 +212,7 @@ const ViewAllButton = styled(Link)`
   border-radius: 4px;
   cursor: pointer;
   margin: 20px auto;
-  // display: block;
+  text-align: center;
 `;
 
 const Content1 = styled.div`
