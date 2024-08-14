@@ -3,13 +3,14 @@ import NavBar from '../Components/Header'
 import Footer from '../Components/Footer'
 import Product from '../Screens/Product'
 
-export default function ProductList() {
+function ProductList() {
   return (
-    <>
-    <NavBar/>
-    <Product/>
-    <Footer/>
-    </>
+  <>
+  <NavBar/>
+  <Product/>
+  <Footer/>
+  </>
   )
 }
 
+export default ProductList

@@ -4,11 +4,16 @@ import productlist from "../Data/Data.json";
 import LikeButton from "../Components/Like";
 
 const Container = styled.div`
-  margin: 100px 200px 0px 200px;
+  margin: 60px 200px 0px 200px;
   display: flex;
   flex-wrap: wrap;
-  gap: 50px 43px;
+  gap: 80px 43px;
   justify-content: left;
+
+  @media (max-width: 768px) {
+    margin: 20px;
+    gap: 40px 20px;
+  }
 `;
 
 const ProductCard = styled.div`
@@ -27,11 +32,11 @@ const TopSection = styled.div`
   margin: 0px;
   position: relative;
 
-
   &:hover .AddCart {
     display: block;
   }
 `;
+
 const AddCart = styled.div`
   display: flex;
   justify-content: center;
@@ -39,9 +44,14 @@ const AddCart = styled.div`
   color: white;
   width: 100%;
   height: 29%;
-  transform: translatex(-50%);
+  position: absolute;
+  bottom: 0;
+  left: 0;
   display: none;
+  align-items: center;
+  justify-content: center;
 `;
+
 const BottomSection = styled.div`
   margin-top: 20px;
 `;
@@ -62,32 +72,33 @@ const Cost = styled.div`
 
 const ColorSection = styled.div`
   display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px;
+  position: absolute;
+  z-index: 1;
   flex-wrap: wrap;
-  gap: 10px;
 `;
 
-const ColorBox1 = styled.div`
-  width: 20px;
-  height: 20px;
+const ColorBox = styled.div`
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
-  background-color: #f00;
-  border: 3px solid black;
-`;
+  border: 2px solid #ccc;
 
-const ColorBox2 = styled.div`
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  border: 3px solid black;
-  background-color: #f00;
+  &:hover {
+    border: 2.5px solid black;
+  }
+
+  background-color: ${(props) => props.color || "#fff"};
 `;
 
 const ProductImage = styled.img`
   width: 100%;
   height: auto;
   display: block;
-
 `;
+
 const Icons = styled.ul`
   position: absolute;
   list-style: none;
@@ -95,25 +106,42 @@ const Icons = styled.ul`
   align-items: center;
   flex-direction: column;
   gap: 10px;
-  top:0;
-  right:0;
-  padding: 5px 15px 0px 0px ;
+  top: 0;
+  right: 0;
+  padding: 5px 15px 0px 0px;
 `;
 
-// const RateImage = styled.img`
-//   max-width: 100%;
-//   height: auto;
-// `;
-// Use styled components in the component
+const New = styled.p`
+  position: absolute;
+  left: 20px;
+  top: 5px;
+  background-color: #00ff66;
+  color: white;
+  padding: 3px 5px;
+  border-radius: 5px;
+`;
+
+const Off = styled.p`
+  position: absolute;
+  left: 20px;
+  top: 5px;
+  background-color: #db4444;
+  color: white;
+  padding: 3px 5px;
+  border-radius: 5px;
+`;
+
 export default function Product() {
   return (
     <Container>
       {productlist.map((product) => (
         <ProductCard key={product.id}>
           <TopSection>
+            {product.new && <New>New</New>}
+            {product.off && <Off>-{product.offer}%</Off>}
             <Icons>
               <li>
-                <LikeButton />
+                <LikeButton /> {/* Placeholder for LikeButton */}
               </li>
               <li>
                 <svg
@@ -144,19 +172,20 @@ export default function Product() {
               src={require(`../assets/images/${product.img}`)}
               alt={product.name}
             />
-            <AddCart> Add to Cart </AddCart>
+            <AddCart>Add to Cart</AddCart>
           </TopSection>
           <BottomSection>
             <Link href="#">{product.name}</Link>
             <Content>
               <Cost>${product.cost}</Cost>
-              {/* <RateImage src={} alt={} /> */}
               <p>({product.buyed})</p>
             </Content>
-            <ColorSection>
-              <ColorBox1></ColorBox1>
-              <ColorBox2></ColorBox2>
-            </ColorSection>
+            {product.color && (
+              <ColorSection>
+                {product.color1 && <ColorBox color={product.color1} />}
+                {product.color2 && <ColorBox color={product.color2} />}
+              </ColorSection>
+            )}
           </BottomSection>
         </ProductCard>
       ))}
