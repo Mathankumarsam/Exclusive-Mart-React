@@ -132,6 +132,27 @@ const Off = styled.p`
 `;
 
 export default function Product() {
+
+  // const renderStars = (rating) => {
+  //   const fullStars = Math.floor(rating);
+  //   const halfStar = rating % 1 !== 0;
+  //   const emptyStars = 5 - fullStars - (halfStar ? 1 : 0);
+
+  //   return (
+  //     <>
+  //       {[...Array(fullStars)].map((_, i) => (
+  //         <img key={`full-${i}`} src={fStar} alt="Full star" />
+  //       ))}
+  //       {halfStar && <img src={hStar} alt="Half star" />}
+  //       {[...Array(emptyStars)].map((_, i) => (
+  //         <img key={`empty-${i}`} src={eStar} alt="Empty star" />
+  //       ))}
+  //     </>
+  //   );
+  // };
+
+
+
   return (
     <Container>
       {productlist.map((product) => (
@@ -178,6 +199,7 @@ export default function Product() {
             <Link href="#">{product.name}</Link>
             <Content>
               <Cost>${product.cost}</Cost>
+
               <p>({product.buyed})</p>
             </Content>
             {product.color && (

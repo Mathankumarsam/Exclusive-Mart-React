@@ -206,7 +206,7 @@ const Off = styled.p`
 `;
 
 const ViewAllButton = styled(Link)`
-  background: #28a745;
+  background: #DB4444;
   color: #fff;
   padding: 10px 20px;
   border-radius: 4px;
