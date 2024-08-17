@@ -122,6 +122,20 @@ const ProductCard = styled.div`
   align-contents: stretch;
   margin: 0;
 `;
+const AddCart = styled.div`
+  position: absolute;
+  text-align: center;
+  width: 96%;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: black;
+  border-radius: 2px 2px 2px 2px ;
+  color: white;
+  padding: 10px 5px;
+  display: none;
+  cursor: pointer;
+`;
 
 const TopSection = styled.div`
   background-color: #f5f5f5;
@@ -132,20 +146,9 @@ const TopSection = styled.div`
   margin: 0;
   position: relative;
 
-  &:hover .AddCart {
+  &:hover ${AddCart} {
     display: block;
   }
-`;
-
-const AddCart = styled.div`
-  display: flex;
-  justify-content: center;
-  background-color: black;
-  color: white;
-  width: 100%;
-  height: 29%;
-  transform: translatex(-50%);
-  display: none;
 `;
 
 const BottomSection = styled.div`

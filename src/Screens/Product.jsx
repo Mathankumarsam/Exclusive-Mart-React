@@ -23,7 +23,21 @@ const ProductCard = styled.div`
   display: flex;
   flex-direction: column;
   align-contents: stretch;
-  margin: 0px;
+  margin: 0;
+`;
+const AddCart = styled.div`
+  position: absolute;
+  text-align: center;
+  width: 96%;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: black;
+  border-radius: 2px 2px 2px 2px ;
+  color: white;
+  padding: 10px 5px;
+  display: none;
+  cursor: pointer;
 `;
 
 const TopSection = styled.div`
@@ -32,27 +46,12 @@ const TopSection = styled.div`
   border-radius: 5px;
   width: auto;
   height: 100%;
-  margin: 0px;
+  margin: 0;
   position: relative;
 
-  &:hover .AddCart {
+  &:hover ${AddCart} {
     display: block;
   }
-`;
-
-const AddCart = styled.div`
-  display: flex;
-  justify-content: center;
-  background-color: black;
-  color: white;
-  width: 100%;
-  height: 29%;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  display: none;
-  align-items: center;
-  justify-content: center;
 `;
 
 const BottomSection = styled.div`
@@ -112,7 +111,7 @@ const Icons = styled.ul`
   gap: 10px;
   top: 0;
   right: 0;
-  padding: 5px 15px 0px 0px;
+  padding: 5px 15px 0 0;
 `;
 
 const New = styled.p`
@@ -163,7 +162,7 @@ export default function Product() {
             {product.off && <Off>-{product.offer}%</Off>}
             <Icons>
               <li>
-                <LikeButton /> {/* Placeholder for LikeButton */}
+                <LikeButton />
               </li>
               <li>
                 <svg
@@ -191,7 +190,7 @@ export default function Product() {
               </li>
             </Icons>
             <ProductImage
-              src={require(`../assets/images/${product.img}`)}
+              src={require(`../assets/images/${product.img}`)} // Consider replacing with import or dynamic import
               alt={product.name}
             />
             <AddCart>Add to Cart</AddCart>
