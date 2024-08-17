@@ -2,6 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import productlist from "../Data/Data.json";
 import LikeButton from "../Components/Like";
+import fullStar from "../assets/images/Vector (1).png";
+import halfStar from "../assets/images/star-half-filled.png";
+import emptyStar from "../assets/images/Vector (2).png";
 
 const Container = styled.div`
   margin: 60px 200px 0px 200px;
@@ -64,6 +67,7 @@ const Link = styled.a`
 const Content = styled.div`
   display: flex;
   align-items: center;
+  gap: 10px;
 `;
 
 const Cost = styled.div`
@@ -132,26 +136,23 @@ const Off = styled.p`
 `;
 
 export default function Product() {
+  const renderStars = (rating) => {
+    const fullStars = Math.floor(rating);
+    const halfStars = rating % 1 !== 0;
+    const emptyStars = 5 - fullStars - (halfStars ? 1 : 0);
 
-  // const renderStars = (rating) => {
-  //   const fullStars = Math.floor(rating);
-  //   const halfStar = rating % 1 !== 0;
-  //   const emptyStars = 5 - fullStars - (halfStar ? 1 : 0);
-
-  //   return (
-  //     <>
-  //       {[...Array(fullStars)].map((_, i) => (
-  //         <img key={`full-${i}`} src={fStar} alt="Full star" />
-  //       ))}
-  //       {halfStar && <img src={hStar} alt="Half star" />}
-  //       {[...Array(emptyStars)].map((_, i) => (
-  //         <img key={`empty-${i}`} src={eStar} alt="Empty star" />
-  //       ))}
-  //     </>
-  //   );
-  // };
-
-
+    return (
+      <>
+        {[...Array(fullStars)].map((_, index) => (
+          <img key={`full-${index}`} src={fullStar} alt="Full star" />
+        ))}
+        {halfStars && <img src={halfStar} alt="Half star" />}
+        {[...Array(emptyStars)].map((_, index) => (
+          <img key={`empty-${index}`} src={emptyStar} alt="Empty star" />
+        ))}
+      </>
+    );
+  };
 
   return (
     <Container>
@@ -199,7 +200,7 @@ export default function Product() {
             <Link href="#">{product.name}</Link>
             <Content>
               <Cost>${product.cost}</Cost>
-
+              <div>{renderStars(product.rating)}</div>
               <p>({product.buyed})</p>
             </Content>
             {product.color && (

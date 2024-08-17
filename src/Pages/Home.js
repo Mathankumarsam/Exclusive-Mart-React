@@ -8,10 +8,31 @@ import styled from "styled-components";
 import productlist from "../Data/Data.json";
 import LikeButton from "../Components/Like";
 import { Link as RouterLink } from "react-router-dom";
+import fullStar from "../assets/images/Vector (1).png";
+import halfStar from "../assets/images/star-half-filled.png";
+import emptyStar from "../assets/images/Vector (2).png";
 
 export default function Home() {
   // Slice the product list to get only the first 8 products
   const displayedProducts = productlist.slice(0, 8);
+
+  const renderStars = (rating) => {
+    const fullStars = Math.floor(rating);
+    const halfStars = rating % 1 !== 0;
+    const emptyStars = 5 - fullStars - (halfStars ? 1 : 0);
+
+    return (
+      <>
+        {[...Array(fullStars)].map((_, index) => (
+          <img key={`full-${index}`} src={fullStar} alt="Full star" />
+        ))}
+        {halfStars && <img src={halfStar} alt="Half star" />}
+        {[...Array(emptyStars)].map((_, index) => (
+          <img key={`empty-${index}`} src={emptyStar} alt="Empty star" />
+        ))}
+      </>
+    );
+  };
 
   return (
     <>
@@ -63,6 +84,7 @@ export default function Home() {
               <Link href="#">{product.name}</Link>
               <Content>
                 <Cost>${product.cost}</Cost>
+                <div>{renderStars(product.rating)}</div>
                 <p>({product.buyed})</p>
               </Content>
               {product.color && (
@@ -138,6 +160,13 @@ const Link = styled.a`
 const Content = styled.div`
   display: flex;
   align-items: center;
+  gap: 10px;
+
+  div {
+    display: flex;
+    align-items: center;
+    gap: 1px;
+  }
 `;
 
 const Cost = styled.div`
@@ -206,7 +235,7 @@ const Off = styled.p`
 `;
 
 const ViewAllButton = styled(Link)`
-  background: #DB4444;
+  background: #db4444;
   color: #fff;
   padding: 10px 20px;
   border-radius: 4px;
