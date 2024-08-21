@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import productlist from "../Data/Data.json";
 import LikeButton from "../Components/Like";
 import fullStar from "../assets/images/Vector (1).png";
 import halfStar from "../assets/images/star-half-filled.png";
@@ -25,6 +24,7 @@ const ProductCard = styled.div`
   align-contents: stretch;
   margin: 0;
 `;
+
 const AddCart = styled.div`
   position: absolute;
   text-align: center;
@@ -134,7 +134,7 @@ const Off = styled.p`
   border-radius: 5px;
 `;
 
-export default function Product() {
+export default function Product({ products }) {
   const renderStars = (rating) => {
     const fullStars = Math.floor(rating);
     const halfStars = rating % 1 !== 0;
@@ -155,7 +155,7 @@ export default function Product() {
 
   return (
     <Container>
-      {productlist.map((product) => (
+      {products.map((product) => (
         <ProductCard key={product.id}>
           <TopSection>
             {product.new && <New>New</New>}

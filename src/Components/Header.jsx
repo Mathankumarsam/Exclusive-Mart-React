@@ -1,14 +1,13 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { Link as RouterLink } from "react-router-dom";
 
-// Styled components :-
 const Container = styled.div`
   height: 3vh;
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  padding: 10px 0px ;
+  padding: 10px 0;
   padding-right: 12.5rem;
   gap: 28rem;
   background-color: black;
@@ -43,6 +42,7 @@ const Bottom = styled.div`
   justify-content: space-around;
   margin-top: 30px;
   padding: 0 0 10px 0;
+  font-size: 16px;
   border-bottom: 1px solid #6e6a6a;
 `;
 
@@ -61,14 +61,12 @@ const NavList = styled.ul`
 
 const ListItem = styled.li`
   margin: 0 10px;
-
-    &:hover {
+  &:hover {
     text-decoration: underline;
-    }
-
+  }
 `;
 
-const ListItemLink = styled(Link)`
+const ListItemLink = styled(RouterLink)`
   color: black;
   text-decoration: none;
 `;
@@ -92,6 +90,7 @@ const SearchInput = styled.input`
   outline: none;
   border: none;
   background-color: transparent;
+  width: 200px;
 `;
 
 const ImageContainer = styled.div`
@@ -104,9 +103,10 @@ const Image = styled.img`
   margin-right: 10px;
 `;
 
-
-
-const NavBar = () => {
+const NavBar = ({ searchQuery, onSearch }) => {
+  if (typeof onSearch !== "function") {
+    console.error("onSearch is not a function");
+  }
   return (
     <>
       <Container>
@@ -127,7 +127,8 @@ const NavBar = () => {
           >
             <path
               d="M6.36403 4.95L11.314 0L12.728 1.414L6.36403 7.778L2.67029e-05 1.414L1.41403 0L6.36403 4.95Z"
-              fill="white" strokeWidth="2"
+              fill="white"
+              strokeWidth="2"
             />
           </svg>
         </Anchorli>
@@ -155,8 +156,13 @@ const NavBar = () => {
             <SearchInput
               type="text"
               placeholder="What are you looking for?"
+              value={searchQuery}
+              onChange={(e) => onSearch(e.target.value)}
             />
-            <img src={require("../assets/images/Vector (2).svg").default} alt="Search Icon" />
+            <img
+              src={require("../assets/images/Vector (2).svg").default}
+              alt="Search Icon"
+            />
           </Search>
           <ImageContainer>
             <Image

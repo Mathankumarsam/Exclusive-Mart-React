@@ -11,6 +11,12 @@ const Division = styled.div`
   border-radius: 20px;
   background-color: black;
   color: white;
+
+  @media screen and (min-width: 1240px) and (max-width: 1440px) {
+    margin: 40px 100px;
+    padding: 15px;
+    font-size: 16px;
+  }
 `;
 
 const DivP = styled.p`
@@ -49,19 +55,24 @@ export default function Offer() {
           <img
             src={
               require("../assets/images/1200px-Apple_gray_logo 1.svg").default
-            } alt="fucntion"
+            }
+            alt="fucntion"
           />
           <span> iphone 14 Series </span>
         </DivP>
         <Divspan>Up to 10% off Voucher </Divspan>
         <DivA>
           Shop Now{" "}
-          <img src={require("../assets/images/Vector (4).svg").default} alt="functi" />
+          <img
+            src={require("../assets/images/Vector (4).svg").default}
+            alt="functi"
+          />
         </DivA>
       </div>
       <div>
         <Iimage
-          src={require("../assets/images/hero_endframe__cvklg0xk3w6e_large 2.png")} alt="functi"
+          src={require("../assets/images/hero_endframe__cvklg0xk3w6e_large 2.png")}
+          alt="functi"
         />
       </div>
     </Division>

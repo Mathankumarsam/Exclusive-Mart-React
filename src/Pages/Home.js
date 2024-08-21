@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import NavBar from "../Components/Header";
 import Footer from "../Components/Footer";
 import Offer from "../Screens/Offer";
@@ -13,8 +13,14 @@ import halfStar from "../assets/images/star-half-filled.png";
 import emptyStar from "../assets/images/Vector (2).png";
 
 export default function Home() {
+  const [searchQuery, setSearchQuery] = useState("");
+
   // Slice the product list to get only the first 8 products
-  const displayedProducts = productlist.slice(0, 8);
+  const displayedProducts = productlist
+    .filter((product) =>
+      product.name.toLowerCase().includes(searchQuery.toLowerCase())
+    )
+    .slice(0, 8);
 
   const renderStars = (rating) => {
     const fullStars = Math.floor(rating);
@@ -34,9 +40,13 @@ export default function Home() {
     );
   };
 
+  const handleSearchChange = (query) => {
+    setSearchQuery(query);
+  };
+
   return (
     <>
-      <NavBar />
+      <NavBar onSearch={handleSearchChange} />
       <Offer />
       <Category />
       <Container>
@@ -122,6 +132,7 @@ const ProductCard = styled.div`
   align-contents: stretch;
   margin: 0;
 `;
+
 const AddCart = styled.div`
   position: absolute;
   text-align: center;
@@ -130,7 +141,7 @@ const AddCart = styled.div`
   left: 50%;
   transform: translateX(-50%);
   background-color: black;
-  border-radius: 2px 2px 2px 2px ;
+  border-radius: 2px 2px 2px 2px;
   color: white;
   padding: 10px 5px;
   display: none;
