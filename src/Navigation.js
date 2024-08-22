@@ -13,13 +13,13 @@ import ProductDetails from "./Pages/ProductDetails";
 function Navigation() {
   return (
     <Router>
+      <Outlet />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/products" element={<ProductList />} />
-        <Route path="/productshow" element={<ProductDetails />} />
+        <Route path="/products/:id" element={<ProductDetails />} />
       </Routes>
-      <Outlet />
     </Router>
   );
 }

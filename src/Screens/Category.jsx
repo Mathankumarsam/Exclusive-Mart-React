@@ -5,6 +5,10 @@ import styled from "styled-components";
 
 const Div = styled.div`
   margin: 60px 200px 0px 200px;
+
+  @media screen and (min-width: 1240px) and (max-width: 1440px) {
+    margin: 40px 100px;
+  }
 `;
 const Div1 = styled.div`
   display: flex;
@@ -29,9 +33,15 @@ const Hed2 = styled.h2`
 `;
 const Div2 = styled.div`
   display: flex;
-  gap: 100px;
-  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px 70px;
+  margin: 60px 0px;
   text-align: center;
+
+  @media screen and (min-width: 1240px) and (max-width: 1440px) {
+    margin: 40px 0px;
+    gap: 30px 64px;
+  }
 `;
 const Tiv = styled.div`
   border: 1px solid gray;
@@ -41,7 +51,6 @@ const Tiv = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 `;
 const Iimage = styled.img`
   display: block;
@@ -62,37 +71,43 @@ export default function Category() {
       <Div2>
         <Tiv>
           <Iimage
-            src={require("../assets/images/Category-CellPhone.svg").default} alt="cell"
+            src={require("../assets/images/Category-CellPhone.svg").default}
+            alt="cell"
           />
           <Hed5>Phones</Hed5>
         </Tiv>
         <Tiv>
           <Iimage
-            src={require("../assets/images/Category-Computer.svg").default} alt="compu"
+            src={require("../assets/images/Category-Computer.svg").default}
+            alt="compu"
           />
           <Hed5>Computers</Hed5>
         </Tiv>
         <Tiv>
           <Iimage
-            src={require("../assets/images/Category-SmartWatch.svg").default} alt="Smart"
+            src={require("../assets/images/Category-SmartWatch.svg").default}
+            alt="Smart"
           />
           <Hed5>SmartWatch</Hed5>
         </Tiv>
         <Tiv>
           <Iimage
-            src={require("../assets/images/Category-Headphone.svg").default} alt="head"
+            src={require("../assets/images/Category-Headphone.svg").default}
+            alt="head"
           />
           <Hed5>HeadPhones</Hed5>
         </Tiv>
         <Tiv>
           <Iimage
-            src={require("../assets/images/Category-Gamepad.svg").default} alt="Game"
+            src={require("../assets/images/Category-Gamepad.svg").default}
+            alt="Game"
           />
           <Hed5>Gaming</Hed5>
         </Tiv>
         <Tiv>
           <Iimage
-            src={require("../assets/images/Group 1000005941.svg").default} alt="Grou"
+            src={require("../assets/images/Group 1000005941.svg").default}
+            alt="Grou"
           />
           <Hed5>Camera</Hed5>
         </Tiv>

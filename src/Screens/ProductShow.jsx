@@ -1,8 +1,9 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 import styled from "styled-components";
-// import productlist from "../Data/Data.json";
+import productlist from "../Data/Data.json"; // Import your product data
 
-// Styles
+// Styles (No changes needed here)
 const Whole = styled.div`
   display: flex;
   align-items: center;
@@ -16,9 +17,8 @@ const Img = styled.img`
   background-color: #f5f5f5;
   padding: 143px 127px 142px 127px;
   border-radius: 4px 0px 0px 0px;
-  opacity: 0px;
+  opacity: 1; /* Set to 1 to display the image */
 `;
-
 const Img1 = styled.img`
   height: 100%;
 `;
@@ -31,13 +31,11 @@ const Right = styled.div`
     width: 370px;
   }
 `;
-
 const Despara = styled.p`
   width: 373px;
   height: 63px;
   line-height: 25px;
 `;
-
 const Rightbotom = styled.div`
   display: inline-block;
   border: 1px solid black;
@@ -57,20 +55,18 @@ const Div1 = styled.div`
   padding: 10px 25px;
 `;
 const Div2 = styled.div`
-display: flex;
-flex-direction:column;
+  display: flex;
+  flex-direction: column;
 
-  h3{
+  h3 {
     font-size: 16px;
     display: inline-block;
     margin: 10px 0px;
-  
   }
 
   p {
     font-size: 12px;
-    display:inline-block;    
-
+    display: inline-block;
   }
 
   span {
@@ -84,7 +80,6 @@ const ColorSection = styled.div`
   gap: 5px;
   margin: 10px 0px 0px 0px;
 `;
-
 const ColorBox = styled.div`
   width: 10px;
   height: 10px;
@@ -97,43 +92,56 @@ const ColorBox = styled.div`
 `;
 
 function ProductShow() {
+  const { id } = useParams(); // Get the product ID from URL
+  const product = productlist.find((p) => p.id === parseInt(id)); // Find the product by ID
+
+  if (!product) {
+    return <p>Product not found</p>;
+  }
+
+
+  // productlist
   return (
     <>
       <Whole>
-        <Img src={require("../assets/images/image 63.png")} />
+        <Img
+          src={require(`../assets/images/${product.img}`)}
+          alt={product.name}
+        />
         <Right>
-          <h1>Havic HV G-92 Gamepad</h1>
-          <p>$120</p>
-          <Despara>
-            PlayStation 5 Controller Skin High quality vinyl with air channel
-            adhesive for easy bubble free install & mess free removal Pressure
-            sensitive.
-          </Despara>
+          <h1>{product.name}</h1>
+          <p>${product.cost}</p>
+          <Despara>{product.description}</Despara>
           <hr />
           <ColorSection>
             Colours:
-            <ColorBox />
-            <ColorBox />
+            {product.colors.map((color, index) => (
+              <ColorBox key={index} style={{ backgroundColor: color }} />
+            ))}
           </ColorSection>
           <Rightbotom>
             <Div1>
               <Img1
                 src={require("../assets/images/icon-delivery (1).svg").default}
+                alt="Delivery Icon"
               />
               <Div2>
-                <h3>Free Delivery </h3>
+                <h3>Free Delivery</h3>
                 <p>
-                  <span>Enter your postal cide fir Delivery Availiability</span>
+                  <span>Enter your postal code for Delivery Availability</span>
                 </p>
               </Div2>
             </Div1>
             <hr />
             <Div1>
-              <Img1 src={require("../assets/images/Icon-return.svg").default} />
+              <Img1
+                src={require("../assets/images/Icon-return.svg").default}
+                alt="Return Icon"
+              />
               <Div2>
-                <h3>Return Delivery </h3>
+                <h3>Return Delivery</h3>
                 <p>
-                  Free 30 Dats Delivery Returns.<span>Details</span>
+                  Free 30 Days Delivery Returns.<span>Details</span>
                 </p>
               </Div2>
             </Div1>

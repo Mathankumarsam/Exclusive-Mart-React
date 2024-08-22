@@ -14,8 +14,6 @@ import emptyStar from "../assets/images/Vector (2).png";
 
 export default function Home() {
   const [searchQuery, setSearchQuery] = useState("");
-
-  // Slice the product list to get only the first 8 products
   const displayedProducts = productlist
     .filter((product) =>
       product.name.toLowerCase().includes(searchQuery.toLowerCase())
@@ -44,14 +42,18 @@ export default function Home() {
     setSearchQuery(query);
   };
 
+  const handleProductClick = (product) => {
+    console.log(product);    
+  }
+
   return (
     <>
       <NavBar onSearch={handleSearchChange} />
       <Offer />
       <Category />
-      <Container>
+      <Container  >
         {displayedProducts.map((product) => (
-          <ProductCard key={product.id}>
+          <ProductCard key={product.id} onClick={handleProductClick} >
             <TopSection>
               {product.new && <New>New</New>}
               {product.off && <Off>-{product.offer}%</Off>}
@@ -124,6 +126,11 @@ const Container = styled.div`
   flex-wrap: wrap;
   gap: 80px 43px;
   justify-content: left;
+
+  @media screen and (max-width: 1440px) {
+    margin: 40px 100px;
+    gap: 40px 43px;
+  }
 `;
 
 const ProductCard = styled.div`

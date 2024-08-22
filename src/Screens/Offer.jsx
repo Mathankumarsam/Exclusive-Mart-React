@@ -12,7 +12,7 @@ const Division = styled.div`
   background-color: black;
   color: white;
 
-  @media screen and (min-width: 1240px) and (max-width: 1440px) {
+  @media screen  and (max-width: 1440px) {
     margin: 40px 100px;
     padding: 15px;
     font-size: 16px;
