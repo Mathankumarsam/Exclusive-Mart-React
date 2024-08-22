@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate, Link as RouterLink } from "react-router-dom"; // Import useNavigate and RouterLink
 import NavBar from "../Components/Header";
 import Footer from "../Components/Footer";
 import Offer from "../Screens/Offer";
@@ -7,13 +8,14 @@ import Services from "../Screens/Services";
 import styled from "styled-components";
 import productlist from "../Data/Data.json";
 import LikeButton from "../Components/Like";
-import { Link as RouterLink } from "react-router-dom";
 import fullStar from "../assets/images/Vector (1).png";
 import halfStar from "../assets/images/star-half-filled.png";
 import emptyStar from "../assets/images/Vector (2).png";
 
 export default function Home() {
   const [searchQuery, setSearchQuery] = useState("");
+  const navigate = useNavigate(); // Initialize navigate
+
   const displayedProducts = productlist
     .filter((product) =>
       product.name.toLowerCase().includes(searchQuery.toLowerCase())
@@ -42,71 +44,72 @@ export default function Home() {
     setSearchQuery(query);
   };
 
-  const handleProductClick = (product) => {
-    console.log(product);    
-  }
+  const ProductCard = ({ product }) => (
+    <Card>
+      <TopSection>
+        {product.new && <New>New</New>}
+        {product.off && <Off>-{product.offer}%</Off>}
+        <Icons>
+          <li>
+            <LikeButton />
+          </li>
+          <li>
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M21.257 10.962C21.731 11.582 21.731 12.419 21.257 13.038C19.764 14.987 16.182 19 12 19C7.81801 19 4.23601 14.987 2.74301 13.038C2.51239 12.7411 2.38721 12.3759 2.38721 12C2.38721 11.6241 2.51239 11.2589 2.74301 10.962C4.23601 9.013 7.81801 5 12 5C16.182 5 19.764 9.013 21.257 10.962V10.962Z"
+                stroke="black"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+              <path
+                d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z"
+                stroke="black"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </li>
+        </Icons>
+        <ProductImage
+          src={require(`../assets/images/${product.img}`)}
+          alt={product.name}
+          onClick={() => navigate(`/products/${product.id}`)} // Corrected path
+        />
+        <AddCart>Add to Cart</AddCart>
+      </TopSection>
+      <BottomSection>
+        <StyledLink to={`/products/${product.id}`}>{product.name}</StyledLink> {/* Corrected Link */}
+        <Content>
+          <Cost>${product.cost}</Cost>
+          <div>{renderStars(product.rating)}</div>
+          <p>({product.buyed})</p>
+        </Content>
+        {product.color && (
+          <ColorSection>
+            {product.color1 && <ColorBox color={product.color1} />}
+            {product.color2 && <ColorBox color={product.color2} />}
+          </ColorSection>
+        )}
+      </BottomSection>
+    </Card>
+  );
 
   return (
     <>
       <NavBar onSearch={handleSearchChange} />
       <Offer />
       <Category />
-      <Container  >
+      <Container>
         {displayedProducts.map((product) => (
-          <ProductCard key={product.id} onClick={handleProductClick} >
-            <TopSection>
-              {product.new && <New>New</New>}
-              {product.off && <Off>-{product.offer}%</Off>}
-              <Icons>
-                <li>
-                  <LikeButton />
-                </li>
-                <li>
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M21.257 10.962C21.731 11.582 21.731 12.419 21.257 13.038C19.764 14.987 16.182 19 12 19C7.81801 19 4.23601 14.987 2.74301 13.038C2.51239 12.7411 2.38721 12.3759 2.38721 12C2.38721 11.6241 2.51239 11.2589 2.74301 10.962C4.23601 9.013 7.81801 5 12 5C16.182 5 19.764 9.013 21.257 10.962V10.962Z"
-                      stroke="black"
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                    <path
-                      d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z"
-                      stroke="black"
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </li>
-              </Icons>
-              <ProductImage
-                src={require(`../assets/images/${product.img}`)}
-                alt={product.name}
-              />
-              <AddCart>Add to Cart</AddCart>
-            </TopSection>
-            <BottomSection>
-              <Link href="#">{product.name}</Link>
-              <Content>
-                <Cost>${product.cost}</Cost>
-                <div>{renderStars(product.rating)}</div>
-                <p>({product.buyed})</p>
-              </Content>
-              {product.color && (
-                <ColorSection>
-                  {product.color1 && <ColorBox color={product.color1} />}
-                  {product.color2 && <ColorBox color={product.color2} />}
-                </ColorSection>
-              )}
-            </BottomSection>
-          </ProductCard>
+          <ProductCard key={product.id} product={product} />
         ))}
       </Container>
       <Content1>
@@ -133,7 +136,7 @@ const Container = styled.div`
   }
 `;
 
-const ProductCard = styled.div`
+const Card = styled.div`
   display: flex;
   flex-direction: column;
   align-contents: stretch;
@@ -173,7 +176,7 @@ const BottomSection = styled.div`
   margin-top: 20px;
 `;
 
-const Link = styled.a`
+const StyledLink = styled(RouterLink)` // Renamed to StyledLink
   text-decoration: none;
   color: inherit;
 `;
@@ -255,7 +258,7 @@ const Off = styled.p`
   border-radius: 5px;
 `;
 
-const ViewAllButton = styled(Link)`
+const ViewAllButton = styled(RouterLink)` // Styled Link
   background: #db4444;
   color: #fff;
   padding: 10px 20px;

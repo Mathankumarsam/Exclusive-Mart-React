@@ -4,6 +4,7 @@ import LikeButton from "../Components/Like";
 import fullStar from "../assets/images/Vector (1).png";
 import halfStar from "../assets/images/star-half-filled.png";
 import emptyStar from "../assets/images/Vector (2).png";
+import { useNavigate, } from "react-router-dom"; // Import useNavigate and RouterLink
 
 const Container = styled.div`
   margin: 60px 200px 0px 200px;
@@ -135,6 +136,7 @@ const Off = styled.p`
 `;
 
 export default function Product({ products }) {
+  const navigate = useNavigate();
   const renderStars = (rating) => {
     const fullStars = Math.floor(rating);
     const halfStars = rating % 1 !== 0;
@@ -192,6 +194,7 @@ export default function Product({ products }) {
             <ProductImage
               src={require(`../assets/images/${product.img}`)} // Consider replacing with import or dynamic import
               alt={product.name}
+              onClick={() => navigate(`/products/${product.id}`)}
             />
             <AddCart>Add to Cart</AddCart>
           </TopSection>
