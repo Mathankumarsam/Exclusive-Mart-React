@@ -11,7 +11,7 @@ const Content1 = styled.div`
   align-items: center;
   margin-top: 50px;
   gap: 10px;
-  margin: 60px 200px 0px 200px;
+  margin: 60px 200px 0px 175px;
 `;
 
 const Navlink = styled(Link)`

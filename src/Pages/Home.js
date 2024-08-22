@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate, Link as RouterLink } from "react-router-dom"; // Import useNavigate and RouterLink
+import { useNavigate, Link as RouterLink } from "react-router-dom"; 
 import NavBar from "../Components/Header";
 import Footer from "../Components/Footer";
 import Offer from "../Screens/Offer";
@@ -258,7 +258,7 @@ const Off = styled.p`
   border-radius: 5px;
 `;
 
-const ViewAllButton = styled(RouterLink)` // Styled Link
+const ViewAllButton = styled(RouterLink)` 
   background: #db4444;
   color: #fff;
   padding: 10px 20px;
@@ -266,6 +266,7 @@ const ViewAllButton = styled(RouterLink)` // Styled Link
   cursor: pointer;
   margin: 20px auto;
   text-align: center;
+  text-decoration : none;
 `;
 
 const Content1 = styled.div`

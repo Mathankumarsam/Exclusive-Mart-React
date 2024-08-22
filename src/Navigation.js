@@ -9,6 +9,7 @@ import Home from "./Pages/Home";
 import About from "./Pages/About";
 import ProductList from "./Pages/ProductList";
 import ProductDetails from "./Pages/ProductDetails";
+import Login from "./Pages/Login";
 
 function Navigation() {
   return (
@@ -16,6 +17,7 @@ function Navigation() {
       <Outlet />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />  
         <Route path="/about" element={<About />} />
         <Route path="/products" element={<ProductList />} />
         <Route path="/products/:id" element={<ProductDetails />} />

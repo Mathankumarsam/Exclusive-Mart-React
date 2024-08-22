@@ -10,7 +10,8 @@
         "new":false,
         "off":false,
         "dis":false,
-        "color":false
+        "color":false,
+        "description":"PlayStation 5 Controller Skin High quality vinyl with air channel adhesive for easy bubble free install & mess free removal Pressure sensitive."
     },
     {
         "id":2,
@@ -23,7 +24,9 @@
         "new":false,
         "off":false,
         "dis":false,
-        "color":false
+        "color":false,
+        "description":"PlayStation 5 Controller Skin High quality vinyl with air channel adhesive for easy bubble free install & mess free removal Pressure sensitive."
+
     },
     {
         "id":3,
@@ -36,7 +39,9 @@
         "new":false,
         "off":false,
         "dis":false,
-        "color":false
+        "color":false,
+        "description":"PlayStation 5 Controller Skin High quality vinyl with air channel adhesive for easy bubble free install & mess free removal Pressure sensitive."
+
     },
     {
         "id":4,
@@ -49,7 +54,9 @@
         "new":false,
         "off":false,
         "dis":false,
-        "color":false
+        "color":false,
+        "description":"PlayStation 5 Controller Skin High quality vinyl with air channel adhesive for easy bubble free install & mess free removal Pressure sensitive."
+
     },
     {
         "id":5,
@@ -64,7 +71,9 @@
         "dis":false,
         "color":true,
         "color1":"red",
-        "color2":"blue"
+        "color2":"blue",
+        "description":"PlayStation 5 Controller Skin High quality vinyl with air channel adhesive for easy bubble free install & mess free removal Pressure sensitive."
+
     },
     {
         "id":6,
@@ -79,7 +88,9 @@
         "dis":false,
         "color":true,
         "color1":"yellow",
-        "color2":"Red"
+        "color2":"Red",
+        "description":"PlayStation 5 Controller Skin High quality vinyl with air channel adhesive for easy bubble free install & mess free removal Pressure sensitive."
+
     },
     {
         "id":7,
@@ -94,7 +105,9 @@
         "dis":false,
         "color":true,
         "color1":"black",
-        "color2":"Red"
+        "color2":"Red",
+        "description":"PlayStation 5 Controller Skin High quality vinyl with air channel adhesive for easy bubble free install & mess free removal Pressure sensitive."
+
     },
     {
         "id":8,
@@ -109,7 +122,9 @@
         "dis":false,
         "color":true,
         "color1":"green",
-        "color2":"Red"
+        "color2":"Red",
+        "description":"PlayStation 5 Controller Skin High quality vinyl with air channel adhesive for easy bubble free install & mess free removal Pressure sensitive."
+
     },
     {
         "id":9,
@@ -124,7 +139,9 @@
         "off":true,
         "offer":40,
         "dis":true,
-        "color":false
+        "color":false,
+        "description":"PlayStation 5 Controller Skin High quality vinyl with air channel adhesive for easy bubble free install & mess free removal Pressure sensitive."
+
     },
     {
         "id":10,
@@ -139,7 +156,9 @@
         "off":true,
         "offer":35,
         "dis":true,
-        "color":false
+        "color":false,
+        "description":"PlayStation 5 Controller Skin High quality vinyl with air channel adhesive for easy bubble free install & mess free removal Pressure sensitive."
+
     },
     {
         "id":11,
@@ -154,7 +173,9 @@
         "off":true,
         "offer":30,
         "dis":true,
-        "color":false
+        "color":false,
+        "description":"PlayStation 5 Controller Skin High quality vinyl with air channel adhesive for easy bubble free install & mess free removal Pressure sensitive."
+
     },
     {
         "id":12,
@@ -168,6 +189,8 @@
         "new":false,
         "off":false,
         "dis":true,
-        "color":false
+        "color":false,
+        "description":"PlayStation 5 Controller Skin High quality vinyl with air channel adhesive for easy bubble free install & mess free removal Pressure sensitive."
+
     }
 ]
