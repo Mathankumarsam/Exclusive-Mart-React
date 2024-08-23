@@ -130,7 +130,7 @@ const Container = styled.div`
   gap: 80px 43px;
   justify-content: left;
 
-  @media screen and (max-width: 1440px) {
+  @media screen and (min-width: 1320px) and (max-width: 1440px) {
     margin: 40px 100px;
     gap: 40px 43px;
   }
