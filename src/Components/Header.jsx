@@ -3,15 +3,39 @@ import styled from "styled-components";
 import { Link as RouterLink } from "react-router-dom";
 
 const Container = styled.div`
-  height: 3vh;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  padding: 10px 0;
   padding-right: 12.5rem;
   gap: 28rem;
   background-color: black;
   color: white;
+
+  @media screen and (min-width: 40px) and (max-width: 1350px) {
+    justify-content: center;
+    padding: 0px;
+  }
+
+  @media screen and (min-width: 40px) and (max-width: 1200px) {
+    gap: 300px;
+  }
+
+  @media screen and (min-width: 40px) and (max-width: 1056px) {
+    gap: 200px;
+  }
+
+  @media screen and (min-width: 40px) and (max-width: 954px) {
+    gap: 150px;
+  }
+
+  @media screen and (min-width: 40px) and (max-width: 860px) {
+    gap: 50px;
+  }
+
+  @media screen and (min-width: 40px) and (max-width: 760px) {
+    display: none;
+  }
 `;
 
 const TopText = styled.p`
@@ -49,6 +73,10 @@ const Bottom = styled.div`
 const Header = styled.h2`
   margin: 0;
   font-size: 28px;
+
+  @media screen and (min-width: 40px) and (max-width: 980px) {
+    font-size: 24px;
+  }
 `;
 
 const NavList = styled.ul`
@@ -57,6 +85,10 @@ const NavList = styled.ul`
   margin: 0;
   display: flex;
   gap: 35px;
+
+  @media screen and (min-width: 40px) and (max-width: 980px) {
+    gap: 20px;
+  }
 `;
 
 const ListItem = styled.li`
@@ -69,6 +101,10 @@ const ListItem = styled.li`
 const ListItemLink = styled(RouterLink)`
   color: black;
   text-decoration: none;
+
+  @media screen and (min-width: 40px) and (max-width: 980px) {
+    font-size: 14px;
+  }
 `;
 
 const Right = styled.div`
@@ -91,16 +127,26 @@ const SearchInput = styled.input`
   border: none;
   background-color: transparent;
   width: 200px;
+
+  @media screen and (min-width: 40px) and (max-width: 1350px) {
+  }
 `;
 
 const ImageContainer = styled.div`
   display: flex;
   align-items: center;
   gap: 10px;
+
+  @media screen and (min-width: 40px) and (max-width: 1350px) {
+  }
 `;
 
 const Image = styled.img`
   margin-right: 10px;
+
+  @media screen and (min-width: 40px) and (max-width: 980px) {
+    width: 24px;
+  }
 `;
 
 const NavBar = ({ searchQuery, onSearch }) => {

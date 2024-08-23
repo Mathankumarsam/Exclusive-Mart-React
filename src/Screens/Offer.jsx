@@ -12,8 +12,20 @@ const Division = styled.div`
   background-color: black;
   color: white;
 
-  @media screen  and (max-width: 1440px) {
+  @media screen and (max-width: 1440px) {
     margin: 40px 100px;
+    padding: 15px;
+    font-size: 16px;
+  }
+
+  @media screen and (max-width: 1280px) {
+    margin: 40px 80px;
+    padding: 15px;
+    font-size: 16px;
+  }
+
+  @media screen and (max-width: 1080px) {
+    margin: 40px 60px;
     padding: 15px;
     font-size: 16px;
   }
@@ -32,6 +44,11 @@ const DivA = styled.a`
   gap: 5px;
   text-decoration: underline;
   font-size: 18px;
+
+  @media screen and (max-width: 1080px) {
+    font-size: 16px;
+    line-height: 50px;
+  }
 `;
 
 const Divspan = styled.h2`
@@ -40,6 +57,11 @@ const Divspan = styled.h2`
   margin: 0px;
   line-height: 68px;
   padding: 20px 0px;
+
+  @media screen and (max-width: 1080px) {
+    font-size: 38px;
+    line-height: 50px;
+  }
 `;
 
 const Iimage = styled.img`

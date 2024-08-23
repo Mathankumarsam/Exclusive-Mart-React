@@ -30,12 +30,21 @@ const Hr = styled.hr`
     width: 16px;
     height: 40px;
   }
+
+  @media screen and (min-width: 40px) and (max-width: 830px) {
+    width: 14px;
+    height: 40px;
+  }
 `;
 const Hed3 = styled.h3`
   font-size: 28px;
 
   @media screen and (min-width: 40px) and (max-width: 1010px) {
     font-size: 22px;
+  }
+
+  @media screen and (min-width: 40px) and (max-width: 830px) {
+    font-size: 20px;
   }
 `;
 const Hed2 = styled.h2`
@@ -45,6 +54,10 @@ const Hed2 = styled.h2`
   @media screen and (min-width: 40px) and (max-width: 1010px) {
     margin-top: 10px;
     font-size: 32px;
+  }
+
+  @media screen and (min-width: 40px) and (max-width: 830px) {
+    font-size: 28px;
   }
 `;
 
@@ -103,7 +116,6 @@ export default function Category() {
     </Div>
   );
 }
-
 
 const Div2 = styled.ul`
   display: flex;
@@ -354,6 +366,8 @@ const Tiv = styled.li`
   @media screen and (min-width: 480px) and (max-width: 743px) {
     width: 500px;
   }
+
+  
 `;
 
 const Iimage = styled.img`
