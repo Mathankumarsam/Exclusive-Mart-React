@@ -11,6 +11,12 @@ const Div = styled.div`
   @media screen and (min-width: 480px) and (max-width: 1319px) {
     margin: 40px 100px;
   }
+  @media screen and (min-width: 480px) and (max-width: 1280px) {
+    margin: 40px 80px;
+  }
+  @media screen and (min-width: 480px) and (max-width: 1080px) {
+    margin: 40px 65px;
+  }
 `;
 const Div1 = styled.div`
   display: flex;
@@ -124,168 +130,177 @@ const Div2 = styled.ul`
   margin: 60px 0px;
   padding: 0px;
 
-  @media screen and (min-width: 1320px) and (max-width: 1440px) {
+  @media screen and (min-width: 130px) and (max-width: 1440px) {
     margin: 40px 0px 0px 0px;
     gap: 20px 65px;
   }
 
-  @media screen and (min-width: 1355px) and (max-width: 1432px) {
-    gap: 20px 45px;
+  @media screen and (min-width: 135px) and (max-width: 1432px) {
+    gap: 20px 65px;
   }
 
-  @media screen and (min-width: 1335px) and (max-width: 1354px) {
+  @media screen and (min-width: 133px) and (max-width: 1420px) {
+    gap: 20px 60px;
+  }
+
+  @media screen and (min-width: 132px) and (max-width: 1400px) {
+    gap: 20px 55px;
+  }
+
+  @media screen and (min-width: 130px) and (max-width: 1379px) {
+    gap: 20px 50px;
+  }
+
+  @media screen and (min-width: 131px) and (max-width: 1359px) {
+    margin: 40px 0px 0px 0px;
+    gap: 20px 48px;
+  }
+
+  @media screen and (min-width: 128px) and (max-width: 1351px) {
+    gap: 20px 45px;
+    margin: 40px 0px 0px 0px;
+  }
+
+  @media screen and (min-width: 125px) and (max-width: 1339px) {
     gap: 20px 40px;
   }
 
-  @media screen and (min-width: 1327px) and (max-width: 1334px) {
-    gap: 20px 38px;
-  }
-
-  @media screen and (min-width: 1320px) and (max-width: 1326px) {
-    gap: 20px 36px;
-  }
-
-  @media screen and (min-width: 1311px) and (max-width: 1319px) {
-    margin: 40px 0px 0px 0px;
-    gap: 20px 34px;
-  }
-
-  @media screen and (min-width: 1280px) and (max-width: 1310px) {
-    gap: 20px 32px;
+  @media screen and (min-width: 127px) and (max-width: 1320px) {
+    gap: 20px 35px;
     margin: 40px 0px 0px 0px;
   }
 
-  @media screen and (min-width: 1295px) and (max-width: 1302px) {
+  @media screen and (min-width: 129px) and (max-width: 1299px) {
+    gap: 20px 30px;
+  }
+  @media screen and (min-width: 127px) and (max-width: 1280px) {
+    gap: 20px 35px;
+    margin: 40px 0px 0px 0px;
+  }
+
+  @media screen and (min-width: 171px) and (max-width: 1278px) {
+    gap: 20px 35px;
+  }
+
+  @media screen and (min-width: 126px) and (max-width: 1270px) {
+    gap: 20px 30px;
+    margin: 40px 0px 0px 0px;
+  }
+
+  @media screen and (min-width: 153px) and (max-width: 1262px) {
     gap: 20px 30px;
   }
 
-  @media screen and (min-width: 1287px) and (max-width: 1294px) {
-    gap: 20px 28px;
+  @media screen and (min-width: 123px) and (max-width: 1252px) {
+    gap: 20px 30px;
     margin: 40px 0px 0px 0px;
   }
 
-  @media screen and (min-width: 1279px) and (max-width: 1286px) {
-    gap: 20px 26px;
+  @media screen and (min-width: 122px) and (max-width: 1237px) {
+    gap: 50px 35px;
   }
-  @media screen and (min-width: 1279px) and (max-width: 1278px) {
-    gap: 20px 24px;
+
+  @media screen and (min-width: 128px) and (max-width: 1232px) {
+    gap: 20px 30px;
     margin: 40px 0px 0px 0px;
   }
 
-  @media screen and (min-width: 1271px) and (max-width: 1278px) {
-    gap: 20px 24px;
-  }
-
-  @media screen and (min-width: 1263px) and (max-width: 1270px) {
-    gap: 20px 22px;
+  @media screen and (min-width: 117px) and (max-width: 1193px) {
+    gap: 20px 40px;
     margin: 40px 0px 0px 0px;
   }
 
-  @media screen and (min-width: 1253px) and (max-width: 1262px) {
-    gap: 20px 90px;
-  }
-
-  @media screen and (min-width: 1238px) and (max-width: 1252px) {
-    gap: 20px 85px;
+  @media screen and (min-width: 113px) and (max-width: 1177px) {
+    gap: 20px 35px;
     margin: 40px 0px 0px 0px;
   }
 
-  @media screen and (min-width: 1223px) and (max-width: 1237px) {
-    gap: 20px 80px;
-  }
-
-  @media screen and (min-width: 1208px) and (max-width: 1222px) {
-    gap: 20px 75px;
+  @media screen and (min-width: 118px) and (max-width: 1162px) {
+    gap: 20px 35px;
     margin: 40px 0px 0px 0px;
   }
 
-  @media screen and (min-width: 1178px) and (max-width: 1192px) {
-    gap: 20px 65px;
+  @media screen and (min-width: 113px) and (max-width: 1152px) {
+    gap: 20px 30px;
     margin: 40px 0px 0px 0px;
   }
 
-  @media screen and (min-width: 1163px) and (max-width: 1177px) {
-    gap: 20px 60px;
+  @media screen and (min-width: 118px) and (max-width: 1137px) {
+    gap: 20px 25px;
     margin: 40px 0px 0px 0px;
   }
 
-  @media screen and (min-width: 1148px) and (max-width: 1162px) {
-    gap: 20px 55px;
-    margin: 40px 0px 0px 0px;
-  }
-
-  @media screen and (min-width: 1133px) and (max-width: 1147px) {
-    gap: 20px 50px;
-    margin: 40px 0px 0px 0px;
-  }
-
-  @media screen and (min-width: 1118px) and (max-width: 1132px) {
-    gap: 20px 45px;
-    margin: 40px 0px 0px 0px;
-  }
-
-  @media screen and (min-width: 1103px) and (max-width: 1117px) {
-    gap: 40px 40px;
-    margin: 40px 0px 0px 0px;
-  }
-
-  @media screen and (min-width: 1088px) and (max-width: 1102px) {
-    gap: 40px 35px;
-    margin: 40px 0px 0px 0px;
-  }
-
-  @media screen and (min-width: 1073px) and (max-width: 1087px) {
-    gap: 40px 30px;
-    margin: 40px 0px 0px 0px;
-  }
-
-  @media screen and (min-width: 1058px) and (max-width: 1072px) {
-    gap: 40px 25px;
-    margin: 40px 0px 0px 0px;
-  }
-
-  @media screen and (min-width: 1043px) and (max-width: 1057px) {
+  @media screen and (min-width: 103px) and (max-width: 1123px) {
     gap: 40px 20px;
     margin: 40px 0px 0px 0px;
   }
 
+  @media screen and (min-width: 108px) and (max-width: 1108px) {
+    gap: 40px 15px;
+    margin: 40px 0px 0px 0px;
+  }
+
+  @media screen and (min-width: 173px) and (max-width: 1093px) {
+    gap: 40px 50px;
+    margin: 40px 0px 0px 0px;
+  }
+
+  @media screen and (min-width: 105px) and (max-width: 1072px) {
+    gap: 40px 45px;
+    margin: 40px 0px 0px 0px;
+  }
+
+  @media screen and (min-width: 104px) and (max-width: 1057px) {
+    gap: 40px 40px;
+    margin: 40px 0px 0px 0px;
+  }
+
   @media screen and (min-width: 105px) and (max-width: 1042px) {
-    gap: 40px 100px;
+    gap: 40px 40px;
+    margin: 40px 0px 0px 0px;
+  }
+
+  @media screen and (min-width: 105px) and (max-width: 1025px) {
+    gap: 40px 30px;
+    margin: 40px 0px 0px 0px;
+  }
+
+  @media screen and (min-width: 105px) and (max-width: 1005px) {
+    gap: 40px 50px;
     margin: 40px 0px 0px 0px;
   }
 
   @media screen and (min-width: 105px) and (max-width: 990px) {
-    gap: 40px 90px;
+    gap: 40px 30px;
     margin: 40px 0px 0px 0px;
   }
-
   @media screen and (min-width: 105px) and (max-width: 970px) {
-    gap: 40px 85px;
+    gap: 40px 50px;
     margin: 40px 0px 0px 0px;
   }
 
   @media screen and (min-width: 105px) and (max-width: 961px) {
-    gap: 40px 80px;
+    gap: 40px 50px;
     margin: 40px 0px 0px 0px;
   }
 
   @media screen and (min-width: 105px) and (max-width: 950px) {
-    gap: 40px 70px;
+    gap: 40px 45px;
     margin: 40px 0px 0px 0px;
   }
 
   @media screen and (min-width: 105px) and (max-width: 930px) {
-    gap: 40px 60px;
+    gap: 40px 40px;
     margin: 40px 0px 0px 0px;
   }
 
   @media screen and (min-width: 105px) and (max-width: 911px) {
-    gap: 40px 55px;
+    gap: 40px 45px;
     margin: 40px 0px 0px 0px;
   }
 
   @media screen and (min-width: 105px) and (max-width: 900px) {
-    gap: 40px 50px;
+    gap: 40px 40px;
     margin: 40px 0px 0px 0px;
   }
 
@@ -314,12 +329,12 @@ const Div2 = styled.ul`
   }
 
   @media screen and (min-width: 105px) and (max-width: 830px) {
-    gap: 40px 50px;
+    gap: 60px 80px;
     margin: 40px 0px 0px 0px;
   }
 
   @media screen and (min-width: 105px) and (max-width: 809px) {
-    gap: 40px 50px;
+    gap: 60px 80px;
   }
 
   @media screen and (min-width: 105px) and (max-width: 788px) {
@@ -337,6 +352,10 @@ const Div2 = styled.ul`
   @media screen and (min-width: 105px) and (max-width: 759px) {
     gap: 35px 45px;
   }
+
+  @media screen and (min-width: 105px) and (max-width: 743px) {
+    gap: 30px 40px;
+  }
 `;
 const Tiv = styled.li`
   border: 1px solid gray;
@@ -347,27 +366,53 @@ const Tiv = styled.li`
   flex-direction: column;
   align-items: center;
 
-  @media screen and (min-width: 105px) and (max-width: 830px) {
+  @media screen and (min-width: 480px) and (max-width: 1319px) {
+    width: 200px;
+  }
+
+  @media screen and (min-width: 830px) and (max-width: 1215px) {
+    width: 180px;
+  }
+
+  @media screen and (min-width: 103px) and (max-width: 1093px) {
     width: 230px;
   }
 
-  @media screen and (min-width: 105px) and (max-width: 809px) {
-    width: 220px;
-  }
-
-  @media screen and (min-width: 105px) and (max-width: 788px) {
+  @media screen and (min-width: 103px) and (max-width: 1005px) {
     width: 210px;
   }
 
-  @media screen and (min-width: 105px) and (max-width: 759px) {
+  @media screen and (min-width: 105px) and (max-width: 970px) {
     width: 200px;
+  }
+
+  @media screen and (min-width: 105px) and (max-width: 945px) {
+    width: 180px;
+  }
+
+  @media screen and (min-width: 105px) and (max-width: 864px) {
+    width: 170px;
+  }
+
+  @media screen and (min-width: 105px) and (max-width: 830px) {
+    width: 250px;
+  }
+
+  @media screen and (min-width: 105px) and (max-width: 809px) {
+    width: 250px;
+  }
+
+  @media screen and (min-width: 105px) and (max-width: 793px) {
+    width: 230px;
+  }
+
+  @media screen and (min-width: 105px) and (max-width: 759px) {
+    width: 230px;
   }
 
   @media screen and (min-width: 480px) and (max-width: 743px) {
     width: 500px;
   }
-
-  
 `;
 
 const Iimage = styled.img`

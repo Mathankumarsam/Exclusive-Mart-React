@@ -68,6 +68,10 @@ const Bottom = styled.div`
   padding: 0 0 10px 0;
   font-size: 16px;
   border-bottom: 1px solid #6e6a6a;
+
+  @media screen and (min-width: 40px) and (max-width: 760px) {
+    margin-top: 20px;
+  }
 `;
 
 const Header = styled.h2`
@@ -76,6 +80,10 @@ const Header = styled.h2`
 
   @media screen and (min-width: 40px) and (max-width: 980px) {
     font-size: 24px;
+  }
+
+  @media screen and (min-width: 40px) and (max-width: 980px) {
+    font-size: 22px;
   }
 `;
 
@@ -88,6 +96,10 @@ const NavList = styled.ul`
 
   @media screen and (min-width: 40px) and (max-width: 980px) {
     gap: 20px;
+  }
+
+  @media screen and (min-width: 40px) and (max-width: 860px) {
+    gap: 10px;
   }
 `;
 
@@ -103,6 +115,14 @@ const ListItemLink = styled(RouterLink)`
   text-decoration: none;
 
   @media screen and (min-width: 40px) and (max-width: 980px) {
+    font-size: 16px;
+  }
+
+  @media screen and (min-width: 40px) and (max-width: 980px) {
+    font-size: 15px;
+  }
+
+  @media screen and (min-width: 40px) and (max-width: 760px) {
     font-size: 14px;
   }
 `;
@@ -111,6 +131,10 @@ const Right = styled.div`
   display: flex;
   align-items: center;
   gap: 15px;
+
+  @media screen and (min-width: 40px) and (max-width: 760px) {
+    gap: 5px;
+  }
 `;
 
 const Search = styled.div`
@@ -120,6 +144,10 @@ const Search = styled.div`
   background-color: #f5f5f5;
   padding: 10px 15px;
   border-radius: 5px;
+
+  @media screen and (min-width: 40px) and (max-width: 980px) {
+    padding: 10px;
+  }
 `;
 
 const SearchInput = styled.input`
@@ -128,7 +156,12 @@ const SearchInput = styled.input`
   background-color: transparent;
   width: 200px;
 
-  @media screen and (min-width: 40px) and (max-width: 1350px) {
+  @media screen and (min-width: 40px) and (max-width: 980px) {
+    width: 160px;
+  }
+
+  @media screen and (min-width: 40px) and (max-width: 760px) {
+    width: 100px;
   }
 `;
 
@@ -137,15 +170,17 @@ const ImageContainer = styled.div`
   align-items: center;
   gap: 10px;
 
-  @media screen and (min-width: 40px) and (max-width: 1350px) {
+  @media screen and (min-width: 40px) and (max-width: 860px) {
+    gap: 5px;
   }
 `;
 
 const Image = styled.img`
   margin-right: 10px;
 
-  @media screen and (min-width: 40px) and (max-width: 980px) {
+  @media screen and (min-width: 40px) and (max-width: 860px) {
     width: 24px;
+    margin-right: 5px;
   }
 `;
 
