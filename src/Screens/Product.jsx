@@ -4,7 +4,7 @@ import LikeButton from "../Components/Like";
 import fullStar from "../assets/images/Vector (1).png";
 import halfStar from "../assets/images/star-half-filled.png";
 import emptyStar from "../assets/images/Vector (2).png";
-import { useNavigate, } from "react-router-dom"; // Import useNavigate and RouterLink
+import { useNavigate } from "react-router-dom";
 
 const Container = styled.div`
   margin: 60px 200px 0px 200px;
@@ -24,17 +24,18 @@ const ProductCard = styled.div`
   flex-direction: column;
   align-contents: stretch;
   margin: 0;
+  position: relative; /* Ensure AddCart can be positioned absolutely */
 `;
 
 const AddCart = styled.div`
   position: absolute;
   text-align: center;
   width: 96%;
-  bottom: 0px;
+  bottom: 0;
   left: 50%;
   transform: translateX(-50%);
   background-color: black;
-  border-radius: 2px 2px 2px 2px ;
+  border-radius: 2px;
   color: white;
   padding: 10px 5px;
   display: none;
@@ -89,12 +90,11 @@ const ColorBox = styled.div`
   height: 10px;
   border-radius: 50%;
   border: 2px solid #ccc;
+  background-color: ${(props) => props.color || "#fff"};
 
   &:hover {
     border: 2.5px solid black;
   }
-
-  background-color: ${(props) => props.color || "#fff"};
 `;
 
 const ProductImage = styled.img`
@@ -135,8 +135,10 @@ const Off = styled.p`
   border-radius: 5px;
 `;
 
-export default function Product({ products }) {
+export default function Product({ products = [], limit = 12 }) {
   const navigate = useNavigate();
+
+  // Function to render stars based on rating
   const renderStars = (rating) => {
     const fullStars = Math.floor(rating);
     const halfStars = rating % 1 !== 0;
@@ -155,9 +157,12 @@ export default function Product({ products }) {
     );
   };
 
+  // Slice the products array to get the first 'limit' items
+  const selectedProducts = products.slice(0, limit);
+
   return (
     <Container>
-      {products.map((product) => (
+      {selectedProducts.map((product) => (
         <ProductCard key={product.id}>
           <TopSection>
             {product.new && <New>New</New>}
@@ -192,7 +197,7 @@ export default function Product({ products }) {
               </li>
             </Icons>
             <ProductImage
-              src={require(`../assets/images/${product.img}`)} // Consider replacing with import or dynamic import
+              src={require(`../assets/images/${product.img}`)}
               alt={product.name}
               onClick={() => navigate(`/products/${product.id}`)}
             />

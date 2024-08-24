@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { useParams, Link as RouterLink } from "react-router-dom"; // Import Link as RouterLink
+import { useParams, Link as RouterLink } from "react-router-dom"; 
 import styled from "styled-components";
 import NavBar from "../Components/Header";
 import Footer from "../Components/Footer";
-import productlist from "../Data/Data.json"; // Import local data
+import productlist from "../Data/Data.json"; 
+import Product from "../Screens/Product"; // Import your Product component
 
 const Breadcrumb = styled.div`
   display: flex;
@@ -13,13 +14,11 @@ const Breadcrumb = styled.div`
 `;
 
 const Navlink = styled(RouterLink)`
-  // Corrected Link
   text-decoration: none;
   color: black;
 `;
 
 const Navlink1 = styled(RouterLink)`
-  // Corrected Link
   text-decoration: none;
   color: gray;
 `;
@@ -50,7 +49,7 @@ const Whole = styled.div`
   align-items: center;
   justify-content: center;
   gap: 100px;
-  margin: 80px 0px  0px 0px ;
+  margin: 80px 0px 0px 0px ;
 `;
 
 const Img = styled.img`
@@ -69,7 +68,7 @@ const Right = styled.div`
   display: flex;
   flex-direction: column;
 
-  h1{
+  h1 {
     margin: 0px;
     font-size: 24px;
   }
@@ -163,7 +162,7 @@ export default function ProductDetails() {
 
   return (
     <>
-      <NavBar  />
+      <NavBar />
       <Breadcrumb>
         <Navlink1 to="/">Home</Navlink1>
         <span>/</span>
@@ -225,9 +224,7 @@ export default function ProductDetails() {
         <Hr />
         <Heading>Related Items</Heading>
       </RelatedItemsSection>
-
-
-      
+      <Product products={productlist}  limit={4} /> 
       <Footer />
     </>
   );

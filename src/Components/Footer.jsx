@@ -7,7 +7,19 @@ const Container = styled.div`
   display: flex;
   justify-content: space-around;
   padding: 50px 0px;
-  margin-top: 100px ;
+  margin-top: 100px;
+
+  @media screen and (min-width: 105px) and (max-width: 940px) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+
+  @media screen and (min-width: 105px) and (max-width: 780px) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
 `;
 
 const Division = styled.div`
@@ -47,6 +59,15 @@ const Einput = styled.input`
   border: none;
   outline: none;
   color: white;
+
+  @media screen and (min-width: 105px) and (max-width: 980px) {
+    width: 150px;
+  }
+
+  @media screen and (min-width: 105px) and (max-width: 940px) {
+    width: 150px;
+    // order: 1;
+  }
 `;
 
 const UlSupport = styled.ul`
@@ -142,6 +163,7 @@ function Footer() {
               <Ulanchor>+88015-88888-9999</Ulanchor>
             </UlSuplist>
           </UlSupport>
+          928
         </Division>
         <Division>
           <UlAccQuick>
