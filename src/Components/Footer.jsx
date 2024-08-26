@@ -9,16 +9,46 @@ const Container = styled.div`
   padding: 50px 0px;
   margin-top: 100px;
 
-  @media screen and (min-width: 105px) and (max-width: 940px) {
+  @media screen and (min-width: 105px) and (max-width: 1100px) {
     display: flex;
     flex-wrap: wrap;
     gap: 40px;
+    padding: 50px 30px;
+  }
+
+  @media screen and (min-width: 105px) and (max-width: 980px) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 50px 30px;
   }
 
   @media screen and (min-width: 105px) and (max-width: 780px) {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 60px;
+  }
+
+  @media screen and (min-width: 105px) and (max-width: 680px) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  @media screen and (min-width: 120px) and (max-width: 480px) {
+    padding: 50px 130px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    gap: 0px;
+  }
+
+  @media screen and (min-width: 120px) and (max-width: 400px) {
+    padding: 50px 100px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    gap: 0px;
   }
 `;
 

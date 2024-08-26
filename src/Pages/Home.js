@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate, Link as RouterLink } from "react-router-dom"; 
+import { useNavigate, Link as RouterLink } from "react-router-dom";
 import NavBar from "../Components/Header";
 import Footer from "../Components/Footer";
 import Offer from "../Screens/Offer";
@@ -86,7 +86,8 @@ export default function Home() {
         <AddCart>Add to Cart</AddCart>
       </TopSection>
       <BottomSection>
-        <StyledLink to={`/products/${product.id}`}>{product.name}</StyledLink> {/* Corrected Link */}
+        <StyledLink to={`/products/${product.id}`}>{product.name}</StyledLink>{" "}
+        {/* Corrected Link */}
         <Content>
           <Cost>${product.cost}</Cost>
           <div>{renderStars(product.rating)}</div>
@@ -130,9 +131,119 @@ const Container = styled.div`
   gap: 80px 43px;
   justify-content: left;
 
-  @media screen and (min-width: 1320px) and (max-width: 1440px) {
+  @media screen and (min-width: 120px) and (max-width: 1440px) {
     margin: 40px 100px;
     gap: 40px 43px;
+  }
+
+  @media screen and (min-width: 120px) and (max-width: 1408px) {
+    margin: 40px 100px;
+    gap: 40px 40px;
+  }
+
+  @media screen and (min-width: 120px) and (max-width: 1399px) {
+    margin: 40px 100px;
+    gap: 40px 30px;
+  }
+
+  @media screen and (min-width: 120px) and (max-width: 1352px) {
+    margin: 40px 100px;
+    gap: 40px 20px;
+  }
+
+  @media screen and (min-width: 120px) and (max-width: 1316px) {
+    margin: 40px 100px;
+    gap: 40px 120px;
+  }
+
+  @media screen and (min-width: 120px) and (max-width: 1249px) {
+    margin: 40px 90px;
+    gap: 40px 100px;
+  }
+
+  @media screen and (min-width: 120px) and (max-width: 1189px) {
+    margin: 40px 85px;
+    gap: 40px 80px;
+  }
+
+  @media screen and (min-width: 120px) and (max-width: 1139px) {
+    margin: 40px 85px;
+    gap: 40px 60px;
+  }
+
+  @media screen and (min-width: 120px) and (max-width: 1099px) {
+    margin: 40px 85px;
+    gap: 40px 40px;
+  }
+
+  @media screen and (min-width: 120px) and (max-width: 1069px) {
+    margin: 40px 65px;
+    gap: 40px 40px;
+  }
+
+  @media screen and (min-width: 120px) and (max-width: 1019px) {
+    margin: 40px 65px;
+    gap: 40px 20px;
+  }
+
+  @media screen and (min-width: 120px) and (max-width: 979px) {
+    margin: 40px 65px;
+    gap: 40px 10px;
+  }
+
+  @media screen and (min-width: 120px) and (max-width: 941px) {
+    margin: 40px 130px;
+    gap: 40px 100px;
+  }
+
+  @media screen and (min-width: 120px) and (max-width: 899px) {
+    margin: 40px 130px;
+    gap: 40px 80px;
+  }
+
+  @media screen and (min-width: 120px) and (max-width: 879px) {
+    margin: 40px 130px;
+    gap: 40px 60px;
+  }
+
+  @media screen and (min-width: 120px) and (max-width: 860px) {
+    margin: 40px 130px;
+    gap: 40px 40px;
+  }
+
+  @media screen and (min-width: 120px) and (max-width: 839px) {
+    margin: 40px 100px;
+    gap: 40px 60px;
+  }
+
+  @media screen and (min-width: 120px) and (max-width: 812px) {
+    margin: 40px 100px;
+    gap: 40px 43px;
+  }
+
+  @media screen and (min-width: 120px) and (max-width: 793px) {
+    margin: 40px 80px 0 80px;
+    gap: 40px 60px;
+  }
+
+  @media screen and (min-width: 740px) and (max-width: 759px) {
+    margin: 40px 80px;
+    gap: 40px 40px;
+  }
+
+  @media screen and (min-width: 120px) and (max-width: 739px) {
+    margin: 0px;
+    justify-content: center;
+    gap: 40px 60px;
+  }
+
+  @media screen and (min-width: 120px) and (max-width: 640px) {
+    gap: 40px 20px;
+  }
+
+  @media screen and (min-width: 120px) and (max-width: 580px) {
+    gap: 40px 20px;
+    margin: 40px ;
   }
 `;
 
@@ -176,7 +287,8 @@ const BottomSection = styled.div`
   margin-top: 20px;
 `;
 
-const StyledLink = styled(RouterLink)` // Renamed to StyledLink
+const StyledLink = styled(RouterLink)`
+  // Renamed to StyledLink
   text-decoration: none;
   color: inherit;
 `;
@@ -258,7 +370,7 @@ const Off = styled.p`
   border-radius: 5px;
 `;
 
-const ViewAllButton = styled(RouterLink)` 
+const ViewAllButton = styled(RouterLink)`
   background: #db4444;
   color: #fff;
   padding: 10px 20px;
@@ -266,7 +378,7 @@ const ViewAllButton = styled(RouterLink)`
   cursor: pointer;
   margin: 20px auto;
   text-align: center;
-  text-decoration : none;
+  text-decoration: none;
 `;
 
 const Content1 = styled.div`

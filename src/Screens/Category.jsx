@@ -17,6 +17,10 @@ const Div = styled.div`
   @media screen and (min-width: 480px) and (max-width: 1080px) {
     margin: 40px 65px;
   }
+
+  @media screen and (min-width: 40px) and (max-width: 480px) {
+    margin: 40px;
+  }
 `;
 const Div1 = styled.div`
   display: flex;
@@ -64,6 +68,10 @@ const Hed2 = styled.h2`
 
   @media screen and (min-width: 40px) and (max-width: 830px) {
     font-size: 28px;
+  }
+
+  @media screen and (min-width: 40px) and (max-width: 480px) {
+    font-size: 26px;
   }
 `;
 
@@ -410,7 +418,7 @@ const Tiv = styled.li`
     width: 230px;
   }
 
-  @media screen and (min-width: 480px) and (max-width: 743px) {
+  @media screen and (min-width: 40px) and (max-width: 743px) {
     width: 500px;
   }
 `;

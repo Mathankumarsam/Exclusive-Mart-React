@@ -5,9 +5,15 @@ import styled from "styled-components";
 
 const Div = styled.div`
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 100px;
   margin: 80px 0px 0px 0px;
+
+
+  @media screen and (min-width: 105px) and (max-width: 990px) {
+    gap: 70px;
+  }
 `;
 const Div1 = styled.div`
   display: flex;

@@ -30,7 +30,24 @@ const Division = styled.div`
     font-size: 16px;
   }
 
-  @media screen and (min-width: 40px) and (max-width: 860px) {
+  @media screen and (min-width: 40px) and (max-width: 640px) {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  @media screen and (min-width: 40px) and (max-width: 480px) {
+    gap: 0px;
+    margin: 40px;
+  }
+
+  div {
+    @media screen and (min-width: 40px) and (max-width: 640px) {
+      padding-top: 40px;
+    }
+
+    @media screen and (min-width: 40px) and (max-width: 480px) {
+      padding: 20px;
+    }
   }
 `;
 
@@ -53,6 +70,10 @@ const DivP = styled.p`
     @media screen and (min-width: 40px) and (max-width: 760px) {
       width: 30px;
     }
+
+    @media screen and (min-width: 40px) and (max-width: 480px) {
+      width: 20px;
+    }
   }
 
   span {
@@ -62,6 +83,10 @@ const DivP = styled.p`
 
     @media screen and (min-width: 40px) and (max-width: 760px) {
       font-size: 15px;
+    }
+
+    @media screen and (min-width: 40px) and (max-width: 480px) {
+      font-size: 12px;
     }
   }
 `;
@@ -82,11 +107,21 @@ const DivA = styled.a`
     font-size: 14px;
   }
 
+  @media screen and (min-width: 40px) and (max-width: 480px) {
+    font-size: 12px;
+    gap: 3px;
+  }
+
   img {
     width: 16px;
     @media screen and (min-width: 40px) and (max-width: 860px) {
       width: 14px;
     }
+
+    @media screen and (min-width: 40px) and (max-width: 480px) {
+      width: 12px;
+
+  }
   }
 `;
 
@@ -111,6 +146,17 @@ const Divspan = styled.h2`
   @media screen and (min-width: 40px) and (max-width: 760px) {
     font-size: 32px;
     line-height: 40px;
+  }
+
+  @media screen and (min-width: 40px) and (max-width: 640px) {
+    font-size: 38px;
+    line-height: 48px;
+  }
+
+  @media screen and (min-width: 40px) and (max-width: 480px) {
+      font-size: 34px;
+      line-height: 40px;
+      width: 200px;
 
   }
 `;

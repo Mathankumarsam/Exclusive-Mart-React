@@ -7,15 +7,125 @@ import emptyStar from "../assets/images/Vector (2).png";
 import { useNavigate } from "react-router-dom";
 
 const Container = styled.div`
-  margin: 60px 200px 0px 200px;
+  margin: 60px 100px 0px 120px;
   display: flex;
   flex-wrap: wrap;
   gap: 80px 43px;
   justify-content: left;
 
-  @media (max-width: 768px) {
-    margin: 20px;
+  @media screen and (min-width: 120px) and (max-width: 1440px) {
+    margin: 40px 100px;
+    gap: 40px 43px;
+  }
+
+  @media screen and (min-width: 120px) and (max-width: 1408px) {
+    margin: 40px 100px;
+    gap: 40px 40px;
+  }
+
+  @media screen and (min-width: 120px) and (max-width: 1399px) {
+    margin: 40px 100px;
+    gap: 40px 30px;
+  }
+
+  @media screen and (min-width: 120px) and (max-width: 1352px) {
+    margin: 40px 100px;
     gap: 40px 20px;
+  }
+
+  @media screen and (min-width: 120px) and (max-width: 1316px) {
+    margin: 40px 100px;
+    gap: 40px 120px;
+  }
+
+  @media screen and (min-width: 120px) and (max-width: 1249px) {
+    margin: 40px 90px;
+    gap: 40px 100px;
+  }
+
+  @media screen and (min-width: 120px) and (max-width: 1189px) {
+    margin: 40px 85px;
+    gap: 40px 80px;
+  }
+
+  @media screen and (min-width: 120px) and (max-width: 1139px) {
+    margin: 40px 85px;
+    gap: 40px 60px;
+  }
+
+  @media screen and (min-width: 120px) and (max-width: 1099px) {
+    margin: 40px 85px;
+    gap: 40px 40px;
+  }
+
+  @media screen and (min-width: 120px) and (max-width: 1069px) {
+    margin: 40px 65px;
+    gap: 40px 40px;
+  }
+
+  @media screen and (min-width: 120px) and (max-width: 1019px) {
+    margin: 40px 65px;
+    gap: 40px 20px;
+  }
+
+  @media screen and (min-width: 120px) and (max-width: 979px) {
+    margin: 40px 65px;
+    gap: 40px 10px;
+  }
+
+  @media screen and (min-width: 120px) and (max-width: 941px) {
+    margin: 40px 130px;
+    gap: 40px 100px;
+  }
+
+  @media screen and (min-width: 120px) and (max-width: 899px) {
+    margin: 40px 130px;
+    gap: 40px 80px;
+  }
+
+  @media screen and (min-width: 120px) and (max-width: 879px) {
+    margin: 40px 130px;
+    gap: 40px 60px;
+  }
+
+  @media screen and (min-width: 120px) and (max-width: 860px) {
+    margin: 40px 130px;
+    gap: 40px 40px;
+  }
+
+  @media screen and (min-width: 120px) and (max-width: 839px) {
+    margin: 40px 100px;
+    gap: 40px 60px;
+  }
+
+  @media screen and (min-width: 120px) and (max-width: 812px) {
+    margin: 40px 100px;
+    gap: 40px 43px;
+  }
+
+  @media screen and (min-width: 120px) and (max-width: 793px) {
+    margin: 40px 80px 0 80px;
+    gap: 40px 60px;
+  }
+
+  @media screen and (min-width: 740px) and (max-width: 759px) {
+    margin: 40px 80px;
+    gap: 40px 40px;
+  }
+
+  @media screen and (min-width: 120px) and (max-width: 739px) {
+    margin: 40px 0px 0px 0px;
+    justify-content: center;
+    gap: 40px 60px;
+  }
+
+  @media screen and (min-width: 120px) and (max-width: 640px) {
+    gap: 40px 20px;
+  }
+
+  @media screen and (min-width: 120px) and (max-width: 580px) {
+    gap: 40px 20px;
+    margin: 40px ;
   }
 `;
 

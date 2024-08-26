@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { Link as RouterLink } from "react-router-dom";
 
@@ -91,22 +91,67 @@ const NavList = styled.ul`
   list-style: none;
   padding: 0;
   margin: 0;
-  display: flex;
-  gap: 35px;
 
-  @media screen and (min-width: 40px) and (max-width: 980px) {
-    gap: 20px;
+  ul {
+    display: flex;
+    gap: 35px;
+
+    @media screen and (min-width: 40px) and (max-width: 980px) {
+      gap: 20px;
+    }
+
+    @media screen and (min-width: 40px) and (max-width: 860px) {
+      gap: 10px;
+    }
   }
 
-  @media screen and (min-width: 40px) and (max-width: 860px) {
-    gap: 10px;
+  @media (max-width: 760px) {
+    position: fixed;
+    top: 0;
+    left: ${(props) => (props.isMenuOpen ? "0" : "-100%")};
+    height: 300px;
+    width: 350px;
+    background-color: #f8f8f8;
+    transition: left 0.3s ease;
+    z-index: 1000;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+`;
+
+const MenuToggle = styled.button`
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  margin: 10px;
+  z-index: 1001;
+
+  @media (max-width: 760px) {
+    display: block;
   }
 `;
 
 const ListItem = styled.li`
   margin: 0 10px;
+  list-style: none;
   &:hover {
     text-decoration: underline;
+  }
+
+  @media (min-width: 981px) {
+    margin: 0 10px;
+    text-align: left;
   }
 `;
 
@@ -118,7 +163,7 @@ const ListItemLink = styled(RouterLink)`
     font-size: 16px;
   }
 
-  @media screen and (min-width: 40px) and (max-width: 980px) {
+  @media screen and (min-width: 40px) and (max-width: 860px) {
     font-size: 15px;
   }
 
@@ -148,6 +193,10 @@ const Search = styled.div`
   @media screen and (min-width: 40px) and (max-width: 980px) {
     padding: 10px;
   }
+
+  @media screen and (min-width: 40px) and (max-width: 480px) {
+    background: none;
+  }
 `;
 
 const SearchInput = styled.input`
@@ -163,6 +212,14 @@ const SearchInput = styled.input`
   @media screen and (min-width: 40px) and (max-width: 760px) {
     width: 100px;
   }
+
+  @media screen and (min-width: 40px) and (max-width: 480px) {
+    display: none;
+  }
+`;
+
+const SearchIcon = styled.img`
+  margin-left: 10px;
 `;
 
 const ImageContainer = styled.div`
@@ -188,6 +245,12 @@ const NavBar = ({ searchQuery, onSearch }) => {
   if (typeof onSearch !== "function") {
     console.error("onSearch is not a function");
   }
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <>
       <Container>
@@ -216,20 +279,23 @@ const NavBar = ({ searchQuery, onSearch }) => {
       </Container>
 
       <Bottom>
+        <MenuToggle onClick={toggleMenu}>{isMenuOpen ? "X" : "☰"}</MenuToggle>
         <Header>Exclusive</Header>
-        <NavList>
-          <ListItem>
-            <ListItemLink to="/">Home</ListItemLink>
-          </ListItem>
-          <ListItem>
-            <ListItemLink to="/contact">Contact</ListItemLink>
-          </ListItem>
-          <ListItem>
-            <ListItemLink to="/about">About</ListItemLink>
-          </ListItem>
-          <ListItem>
-            <ListItemLink to="/signup">Sign Up</ListItemLink>
-          </ListItem>
+        <NavList isMenuOpen={isMenuOpen}>
+          <ul>
+            <ListItem>
+              <ListItemLink href="/">Home</ListItemLink>
+            </ListItem>
+            <ListItem>
+              <ListItemLink href="/contact">Contact</ListItemLink>
+            </ListItem>
+            <ListItem>
+              <ListItemLink href="/about">About</ListItemLink>
+            </ListItem>
+            <ListItem>
+              <ListItemLink href="/signup">Sign Up</ListItemLink>
+            </ListItem>
+          </ul>
         </NavList>
 
         <Right>
@@ -240,7 +306,7 @@ const NavBar = ({ searchQuery, onSearch }) => {
               value={searchQuery}
               onChange={(e) => onSearch(e.target.value)}
             />
-            <img
+            <SearchIcon
               src={require("../assets/images/Vector (2).svg").default}
               alt="Search Icon"
             />
